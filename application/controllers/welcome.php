@@ -34,6 +34,8 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$data->page_heading = "Home";
+		$data->page_link = "Home";	
         $this->load->view('header',$data);            
 		$this->load->view('welcome_message',$data);
         $this->load->view('footer',$data);
@@ -56,11 +58,13 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$data->page_heading = "About us";
+		$data->page_link = "About-us";		
         $this->load->view('header',$data);            
 		$this->load->view('about_us',$data);
         $this->load->view('footer',$data);
 	}
-	public function risk_management()
+	public function services()
 	{
         $data=new stdClass();
             if($this->session->flashdata('item')) {
@@ -77,8 +81,10 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$data->page_heading = "Services";
+		$data->page_link = "Services";		
         $this->load->view('header',$data);            
-		$this->load->view('risk_management',$data);
+		$this->load->view('services',$data);
         $this->load->view('footer',$data);
 	}
     
@@ -99,6 +105,8 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$data->page_heading = "Contact us";
+		$data->page_link = "Contact-us";		
         $this->load->view('header',$data);            
 		$this->load->view('contact_us',$data);
         $this->load->view('footer',$data);
@@ -126,7 +134,7 @@ class Welcome extends CI_Controller {
         $this->load->view('footer',$data);
 	}
     
-    public function peer_to_peer()
+    public function support()
 	{
         $data=new stdClass();
             if($this->session->flashdata('item')) {
@@ -143,12 +151,14 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$data->page_heading = "Support";
+		$data->page_link = "Support";		
         $this->load->view('header',$data);            
-		$this->load->view('peer_to_peer',$data);
+		$this->load->view('support',$data);
         $this->load->view('footer',$data);
 	}
     
-    public function how_it_works()
+	public function find_car()
 	{
         $data=new stdClass();
             if($this->session->flashdata('item')) {
@@ -165,8 +175,70 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$this->load->model('welcome_model');
+		if($_POST){
+			$transmission = ($_POST['transmission'] == 1) ? 1 : 0;
+			$category = ($_POST['category']) ? $_POST['category'] : '';
+			$fuel_type = ($_POST['fuel_type']) ? $_POST['fuel_type'] : '';			
+			$cars = $this->welcome_model->SelectRecord('cars','*',array("transmission"=>$transmission,"fuel_type"=>$fuel_type,"category"=>$category,"is_deleted"=>'1'),'id desc');
+		}else{
+			$cars = $this->welcome_model->SelectRecord('cars','*',array("is_deleted"=>'1'),'id desc');	
+		}
+		
+	    foreach($cars as $key=>$row){
+		$photos = $this->welcome_model->SelectRecord('car_photos','image',array("car_id"=>$row['id']),'id desc');
+		$carphoto = [];
+		foreach($photos as $photo){
+			$carphoto[] = $photo['image'];
+		}
+		$cars[$key]['image'] = $carphoto;
+	    }
+		
+		$data->cars = $cars;		
+		$data->page_heading = "Find a Car";
+		$data->page_link = "Find-car";		
         $this->load->view('header',$data);            
-		$this->load->view('how_it_works',$data);
+		$this->load->view('find-car',$data);
+        $this->load->view('footer',$data);
+	}
+	
+	public function partner()
+	{
+		$data=new stdClass();
+		if(!$this->session->userdata('user_id')){
+			$data->error=1;
+			$data->success=0;
+			$data->message="You must login first to become a partner.";	   
+			$this->session->set_flashdata('item',$data);
+			redirect('Login');
+		}
+		
+        
+            if($this->session->flashdata('item')) {
+                $items = $this->session->flashdata('item');
+                if($items->success){
+                    $data->error=0;
+                    $data->success=1;
+                    $data->message=$items->message;
+                }else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->message=$items->message;
+                }
+                //print_r($data); die;
+                $data->msg = 1;
+            }
+		
+		if($this->session->userdata('user_id')){
+			$this->load->model('welcome_model');
+			$data->cars = $this->welcome_model->SelectRecord('cars',array(),array(),'id desc');
+			$data->companyinfo = $this->welcome_model->SelectSingleRecord('partner','*',array("user_id"=>$this->session->userdata('user_id')),$orderby=array());
+		}
+		//print_r($data); die;
+		$data->page_heading = "Become a Partner";
+		$data->page_link = "Become-partner";		
+        $this->load->view('header',$data);            
+		$this->load->view('become-partner',$data);
         $this->load->view('footer',$data);
 	}
     

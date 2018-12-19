@@ -1,192 +1,290 @@
-<footer>
-				<div class="container">
-					<div class="row">
-						<div class="col-md-3 col-sm-6">
-							
-								<div class="title-block">
-									<h4>About Suxxis</h4>
-									
-								</div>
-								<ul class="imp-link">
-									<li><a href="#">work for us</a></li>
-									<li><a href="<?php echo site_url('Contact-us');?>">contact us</a></li>
-									<li><a href="<?php echo site_url('Faq');?>">FAQ's</a></li>
-									
-									<li><a href="#">Testimonials</a></li>
+<footer class="footer">
+ 	<div class="container">
+    	<div class="row top">
+        	<div class="col-md-3">
+            	<h4>Get in Contact</h4>
+                <ul class="footer_contact">
+                	<li>
+                    	<i class="fa fa-map-marker"></i><span class="text">Rock St 12, Newyork City, USA</span>
+                    </li>
+                    <li>
+                    	<i class="fa fa-mobile"></i><span class="text">236-895-4732</span>
+                    </li>
+                    <li>
+                    	<i class="fa fa-envelope"></i><span class="text">carrental@gmail.com</span>
+                    </li>
+                    <li>
+                    	<a href="#" class="link_find_map">Find Us On Map</a>
+                    </li>
+               </ul>
+            </div>
+            
+            <div class="col-md-3">
+            	<h4>Latest Blog</h4>
+                <ul class="blog-list">
+                    <li><a href="#">Tout Terrain gold city</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                    <li><a href="#">Car driving a tunnel</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                    <li><a href="#">How to drive a car ?</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                </ul>
+            </div>
+            
+              <div class="col-md-3">
+                <h4>Usefull Links</h4>
+                <ul class="usefull-link">
+                    <li><a href="our_partners.html">Our Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Request a Quote</a></li>
+                </ul>
+               </div>
+               
+                <div class="col-md-3">
+            	<h4>Working Hours</h4>
+                
+                <div class="ovacrs_working_hour "><div class="title">Sales Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br>Saturday &amp; Sunday: <span>Closed</span></div></div>
+                
+                <div class="ovacrs_working_hour last"><div class="title">Service Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br>Saturday &amp; Sunday: <span>Closed</span></div></div>
+                
+                </div>
+        </div>
+    </div>
+    
+    <div class="container">
+    	<div class="row bottom">
+        	<div class="footer_social">
+            	<ul class="ireca_socials ">
+                    <li class="d-inline"><a href="#" class="facebook" target="_blank">Facebook</a></li>
+                    <li class="d-inline"><a href="#" class="twitter" target="_blank">Twitter</a></li>
+                    <li class="d-inline"><a href="#" class="youtube" target="_blank">Youtube</a></li>
+                    <li class="d-inline"><a href="#" class="google" target="_blank">Google+</a></li>
+                    <li class="d-inline"><a href="#" class="rss" target="_blank">Rss feed</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="footer_copyright">Copyright by Car Rental. All reserved</div>
+        </div>
+    </div>
+ </footer>  
+</body>
 
-								</ul>
-							
-							
-						</div>
-                        <div class="col-md-3 col-sm-6">
-							
-								<div class="title-block">
-									<h4>services</h4>
-									
-								</div>
-								<ul class="imp-link">
-									<li><a href="<?php echo site_url('Risk-management');?>">Risk Management</a></li>
-                                    <li><a href="<?php echo site_url('How-it-works');?>">How It Works </a></li>
-                                    <li><a href="<?php echo site_url('Peer-to-peer');?>">Peer to Peer Lending Program  </a></li>
 
-								</ul>
-							
-							
-						</div>
-						
-						<div class="col-md-3 col-sm-6">
-							
-								<div class="title-block">
-									<h4>Business Hours	</h4>
-									
-								</div>
-								<ul class="imp-link">
-									<li>Monday - Friday 9am - 5pm </li>
-                                    <li>Saturday - 10am - 2pm</li>
-                                    <li>Sunday - Closed  </li>
-
-								</ul>
-							
-						</div>
-						<div class="col-md-3 col-sm-6">
-							
-								<div class="title-block">
-									<h4>Connecting People </h4>
-									
-								</div>
-								<img src="<?php echo base_url('assets/front');?>/images/footer-map.png" class="img-responsive" alt="Image">
-                               
-                               
-							</div>
-						
-                        
-                        <div class="col-md-12 col-sm-12 social_panel">
-                        	<div class="col-md-5"><img src="<?php echo base_url('assets/front');?>/images/live_chat.png" class="chat_img"> Live Chat Support Available 24 Hours A Day</div>
-                            <div class="col-md-3 col-sm-6"> <ul class="footer-social">
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-								</ul></div>
-                                
-                                <div class="col-md-2 col-sm-6"><a href="https://vergecurrency.com/" class="comp_logo"><img src="<?php echo base_url('assets/front');?>/images/verge-logo.png"></a> </div>
-                        </div>
-                        
-                        
-					</div>
-				</div>
-			</footer>
-
-<section class="bottom_footer">
-				<div class="container">
-					<div class="col-md-6 col-sm-8">
-									<p><a href="<?php echo site_url('');?>"><img src="<?php echo base_url('assets/front');?>/images/footer-logo.png" width="200px"> </a>© 2018 Suxxis - All Rights Reserved  
-</span></p>
-								</div>
-						<div class="col-md-3 col-sm-4 pull-right">
-									<ul>
-                                    	<li><a href="#">Site Map </a></li>
-
-										<li><a href="#">Privacy Policy    </a></li>
-										
-									</ul>
-						</div>
-								
-							</div>
-						
-					</div>
-				</div>
-			</section>
-
-	    <!-- Placed at the end of the document so the pages load faster -->
-	    <script src="<?php echo base_url('assets/front');?>/js/jquery.min.js"></script>
-	   <script src="<?php echo base_url('assets/front');?>/js/bootstrap.min.js"></script>
-	     
-	     <script>
-		 	$(document).ready(function() {   
-	            var sideslider = $('[data-toggle=collapse-side]');
-	            var sel = sideslider.attr('data-target');
-	            var sel2 = sideslider.attr('data-target-2');
-	            sideslider.click(function(event){
-	                $(sel).toggleClass('in');
-	                $(sel2).toggleClass('out');
-	            });
-	        });
-		 </script>
-		 <script src="<?php echo base_url('assets/front');?>/js/owl.carousel.js"></script>
-<script>
-$(document).ready(function(){
-	$('.owl-carousel').owlCarousel({
-		loop:true,
-		margin:10,
-		items:1,
-		responsiveClass:true,
-
-		responsive:{
-			0:{
-				items:1,
-				nav:true
-			},
-			600:{
-				items:1,
-				nav:false
-			},
-			1000:{
-				items:1,
-				nav:true,
-				loop:false,
-				margin:20
-			}
-		}
-	})
-	
-	
-	
-	
-})
-</script>
-<script src="<?php echo base_url('assets/front');?>/js/aos.js"></script>
-
-		<script>
-			AOS.init({
-				easing: 'ease-out-back',
-				duration: 1000
-			});
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/front');?>/js/moment.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/front');?>/js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/front');?>/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/front');?>/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url('assets/front');?>/js/dataTables.responsive.min.js"></script>
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({format: 'DD-MM-YYYY'});
+	    $('#datetimepicker2').datetimepicker({format: 'DD-MM-YYYY'});
+            });
+        </script>
+        <script>
+            $('.selectpicker').selectpicker();
 		</script>
-<script>
-(function() {
-
-  'use strict';
-
-  // define variables
-  var items = document.querySelectorAll(".timeline li");
-
-  // check if an element is in viewport
-  // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-  function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-      rect.top >= 0 &&
-      rect.left >= 0 &&
-      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-  }
-
-  function callbackFunc() {
-    for (var i = 0; i < items.length; i++) {
-      if (isElementInViewport(items[i])) {
-        items[i].classList.add("in-view");
-      }
+        <script src="<?php echo base_url('assets/front');?>/js/jquery-ui.js"></script>
+          <script>
+            $( function() {
+              $( "#slider-range" ).slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [ 75, 300 ],
+                slide: function( event, ui ) {
+                  $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                }
+              });
+              $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+            } );
+            </script>
+        <script type="text/javascript" src="<?php echo base_url('assets/front');?>/js/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+        $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    autoplay:true,
+    responsive:{
+    0:{
+        items:1
+    },
+    600:{
+        items:2
+    },
+    1000:{
+        items:3
     }
+    }
+    })
+    </script> 
+        <script type="text/javascript">
+	$('[data-toggle="slide-collapse"]').on('click', function() {
+	$navMenuCont = $($(this).data('target'));
+	$navMenuCont.animate({
+	'width': 'toggle'
+	}, 350);
+	$(".menu-overlay").fadeIn(500);
+	
+	});
+	$(".menu-overlay").click(function(event) {
+	$(".navbar-toggle").trigger("click");
+	$(".menu-overlay").fadeOut(500);
+	});
+	
+	</script>
+     <script type="text/javascript">
+      $(window).scroll(function(){
+      if ($(this).scrollTop() > 320) {
+          $('#task_flyout').addClass('fixed');
+      } else {
+          $('#task_flyout').removeClass('fixed');
+      }
+  });
+    </script>
+     <script type="text/javascript">
+         $(function() {
+         var Accordion = function(el, multiple) {
+         this.el = el || {};
+         // more then one submenu open?
+         this.multiple = multiple || false;
+         
+         var dropdownlink = this.el.find('.dropdownlink');
+         dropdownlink.on('click',
+                         { el: this.el, multiple: this.multiple },
+                         this.dropdown);
+         };
+         
+         Accordion.prototype.dropdown = function(e) {
+         var $el = e.data.el,
+             $this = $(this),
+             //this is the ul.submenuItems
+             $next = $this.next();
+         
+         $next.slideToggle();
+         $this.parent().toggleClass('open');
+         
+         if(!e.data.multiple) {
+           //show only one menu at the same time
+           $el.find('.submenuItems').not($next).slideUp().parent().removeClass('open');
+         }
+         }
+         
+         var accordion = new Accordion($('.accordion-menu'), false);
+         })
+      </script>
+
+      <!-- profile pic update script -->
+      <script type="text/javascript">
+         $(document).ready(function() {
+         
+         
+         var readURL = function(input) {
+           if (input.files && input.files[0]) {
+               var reader = new FileReader();
+         
+               reader.onload = function (e) {
+                   $('.profile-pic').attr('src', e.target.result);
+               }
+         
+               reader.readAsDataURL(input.files[0]);
+           }
+         }
+         
+         
+         $(".file-upload").on('change', function(){
+           readURL(this);
+         });
+         
+         $(".upload-button").on('click', function() {
+          $(".file-upload").click();
+         });
+         });
+      </script>
+        <script type="text/javascript">
+            $('#chooseFile').bind('change', function () {
+  var filename = $("#chooseFile").val();
+  if (/^\s*$/.test(filename)) {
+    $(".file-upload").removeClass('active');
+    $("#noFile").text("No file chosen..."); 
   }
+  else {
+    $(".file-upload").addClass('active');
+    $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+  }
+});
 
-  // listen for events
-  window.addEventListener("load", callbackFunc);
-  window.addEventListener("resize", callbackFunc);
-  window.addEventListener("scroll", callbackFunc);
+        </script>
+        
+        <script type="text/javascript">
+      $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        responsive: true
+    } );
+ 
+    new $.fn.dataTable.FixedHeader( table );
+} );
+      </script>
+		
+		 <script>
+			jQuery("#single_car_price_per_unit_change").on( 'click', function(){
+		jQuery('#price_per_unit_select').toggle();
+	});
+	
+	
+	
+	jQuery("#price_per_unit_select li a").on( 'click', function(){
+		
+		
+		var selectPrice = jQuery(this).attr('data-price');
+		var selectUnit = jQuery(this).html();
+		
+		jQuery('#single_car_price').html(selectPrice);
+		jQuery('#single_car_unit').html(selectUnit);
+		
+		jQuery('#single_car_price_scroll').html(selectPrice);
+		jQuery('#single_car_unit_scroll').html(selectUnit);
+	});
+	
+	
 
-})();
-</script>
+		</script>
+        <script defer src="<?php echo base_url('assets/front');?>/js/jquery.flexslider.js"></script>
 
-	  </body>
-	</html>
+  <script type="text/javascript">
+    
+    $(window).load(function(){
+      $('#carousel').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        itemWidth: 100,
+        itemMargin: 5,
+        asNavFor: '#slider'
+      });
+
+      $('#slider').flexslider({
+        animation: "slide",
+        controlNav: false,
+        animationLoop: false,
+        slideshow: false,
+        sync: "#carousel",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+</html>

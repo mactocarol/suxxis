@@ -1,224 +1,591 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title> Car Rental</title>
+    
+	<link rel="icon" href="../../favicon.ico">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="css/owl.theme.default.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
 
-        <title>User Panel</title>
-
-         <!-- Bootstrap CSS CDN -->
-         <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/jquery.dataTables.min.css">
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-    	
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#menu-toggle" id="menu-toggle"><span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
-            
-            <a href="#" class="logo"><img src="images/Suxxis-Logo.png"></a>
+<body>
+<section class="row info-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 col-xs-8 logo-box">
+          <a href="index.html" class="logo"><h1>Rent car</h1></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <ul class="nav navbar-nav navbar-right">
-               
-				<li><a href="#"><i class="fa fa-bell"></i> </a></li>
-             	<li class="dropdown"><a href="#" class="" data-toggle="dropdown"><i class="fa fa-gear"></i></a>
-                
-                <ul class="dropdown-menu">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
-  </ul>
-              </li>
-                <li class="user-profile"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><div class="user_img"><img src="images/user.png"> <span>Hi, Nutpraware</span></div></a>
-                	
-                    <ul class="dropdown-menu">
-    <li><a href="#">HTML</a></li>
-    <li><a href="#">CSS</a></li>
-    <li><a href="#">JavaScript</a></li>
-  </ul>
-                
-                </li>
-            </ul>
+        <div class="col-sm-9 col-xs-4 info-box">
+                <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="slide-collapse" data-target="#main-nav-outer" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="header-informations hidden-xs top-bar">
+              <ul class="social-lists-wSearch nav pull-right">
+                  <li><a href="car.html">Find a Car</a></li>
+                  <li><a href="rent_car.html">Become a Partner</a></li>
+                  <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                  <li><a href="login.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+              </ul>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+    <div class="clearfix"></div>
+    <section class="tp_info">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="header-informations top-bar2">
+              <ul class="social-lists-wSearch nav pull-right">
+                <li><a href="car.html">Find a Car</a></li>
+                  <li><a href="rent_car.html">Become a Partner</a></li>
+                  <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                  <li><a href="login.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+              </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<nav class="navbar navbar-default main-navigation navbar-static-top" id="main-nav-outer">
+    <div class="container">
             
+      <!-- Collect the nav links, forms, and other content for toggling -->
+             
+      <div class="navbar-collapse collapse" id="main-nav">        
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">home </a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="services.html">services</a></li>
+                    <li><a href="support.html">support</a></li>
+                    <li><a href="contact.html">contact</a></li>
+          
+        </ul>     
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>     
+
+<section class="row page-cover">
+  		<div class="container">
+  			<h2 class="h1 page-title">Supports</h2>
+  			<ol class="breadcrumb">
+  				<li><a href="index.html">home</a></li>
+  				<li class="active">Supports</li>
+  			</ol>
+  		</div>
+  	</section>
+    
+<section class="row wrapper-services">
+		<div class="container">
+			<div class="media ipad-width">
+				<div class="row">
+					<div class="col-md-5 col-sm-12 col-xs-12">
+						<div class="media-left">
+							<span><img src="images/support.jpg" alt=""></span>
+						</div>
+					</div>
+					<div class="col-md-7 col-sm-12 col-xs-12">
+						<div class="media-body media-bottom">  								
+							<div class="row section-title m0">
+								<h6 class="this-top">24/7 SUPPORT AVAILABLE</h6>
+								<h2 class="h1 this-main">HAPPY TRAVEL</h2>
+								<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+								
+								<div class="btn-sv">
+									<a href="#" class="btn btn-primary light">Contact Us</a>
+									<a href="#" class="btn btn-primary">more info</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+	</section>
+ <section class="row services-offer">
+		<div class="container">
+			<div class="row section-title text-center">
+				<h2 class="h1 this-main">Experienced Team</h2>
+				<p>Tempor incididunt labore dolore magna aliqua volputate sed ipsum</p>
+			</div>
+<div class="Our_team">
+	<div class="owl-carousel owl-theme">
+    <div class="item">
+    	<div class="row">
+        <div class="col-md-12">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/team1.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Lorem Ipsum</span>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
-
-<div id="wrapper" class="toggled">
-    <div class="container-fluid">
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-              	<li class="sidebar-brand">
-                    <br>
-                </li>
-                
-                <li>
-                    <a href="#"><span class="fa fa-gear" aria-hidden="true"></span> Dashboard</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-plus-circle" aria-hidden="true"></span> Add Your Testimonial</a>
-                </li>
-                 <li>
-                    <a href="#"><span class="fa fa-user" aria-hidden="true"></span> My profile</a>
-                </li>                
-                <li>
-                    <a href="#"><span class="fa fa-users" aria-hidden="true"></span> My Referrals</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-money" aria-hidden="true"></span> My money</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-pencil" aria-hidden="true"></span> Tutorial</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-gear" aria-hidden="true"></span> Settings</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-headphones" aria-hidden="true"></span> Support</a>
-                </li>
-              	<li>
-                    <a href="#"><span class="fa fa-newspaper-o" aria-hidden="true"></span> News</a>
-                </li>
-                <li>
-                    <a href="#"><span class="fa fa-power-off" aria-hidden="true"></span> Logout</a>
-                </li>
-            </ul>
+    </div>
+    <div class="item">
+    	<div class="row">
+        <div class="col-md-12">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/team2.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Lorem Ipsum</span>
+                </div>
+            </div>
         </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                      <div class="breadcum_outer">
-                      	<ul>
-                        	<li><a href="#">Home</a></li>
-                            <li>Support</li>
-                        </ul>
-                      </div>
-                      
+    </div>
+    </div>
+    <div class="item">
+    	<div class="row">
+        <div class="col-md-12">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/team3.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Lorem Ipsum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="item">
+    	<div class="row">
+        <div class="col-md-12">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/team1.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Lorem Ipsum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="item">
+    	<div class="row">
+        <div class="col-md-12">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/team2.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Lorem Ipsum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+     <div class="item">
+    	<div class="row">
+        <div class="col-md-12">
+            <div class="our-team">
+                <div class="pic">
+                    <img src="images/team3.jpg">
+                    <ul class="social">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                        <li><a href="#" class="fa fa-linkedin"></a></li>
+                    </ul>
+                </div>
+                <div class="team-content">
+                    <h3 class="title">Williamson</h3>
+                    <span class="post">Lorem Ipsum</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+			
+</div><!--End of team -->
+<div class="faq_Sec">
+	<div class="row">
+        <div class="col-md-5">
+        	<div class="section-titles text-left">
+				<h2 class="h1 this-main">Read FAQ’s</h2>
+				<p>Tempor incididunt duis labore dolore magna aliqua sed ipsum</p>
+			</div>
+			<div class="ui-decor"></div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Section 1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                        </div>
                     </div>
                 </div>
-                
-                
-                
-                
-                
-        
-        		<div class="row">
-                	<div class="dashboard-list-box margin-top-0">
-					<h4>Support</h4>
-					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                       1) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Section 2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Section 3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisl lorem, dictum id pellentesque at, vestibulum ut arcu. Curabitur erat libero, egestas eu tincidunt ac, rutrum ac justo. Vivamus condimentum laoreet lectus, blandit posuere tortor aliquam vitae. Curabitur molestie eros. </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingTwo">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                       1) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        </div>
-
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingThree">
-                <h4 class="panel-title">
-                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="more-less glyphicon glyphicon-plus"></i>
-                        1) Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </a>
-                </h4>
-            </div>
-            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                <div class="panel-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                </div>
-            </div>
-        </div>
-
-    </div><!-- panel-group -->
-    
-                    
-                    
-                    
-				</div>
-                </div>
-        <footer>
-        	<p>@2018 suxxis. All Right Reserved</p>
-        </footer>
-            </div>
-            
-        </div>
-        <!-- /#page-content-wrapper -->
+        <div class="col-md-7">
+        	<div class="auto_chk">
+        	<div class="section-titles text-left">
+				<h2 class="h1 this-main">Book Auto Checkup</h2>
+				<p>Tempor incididunt duis labore dolore magna aliqua sed ipsum</p>
+			</div>
+			<div class="ui-decor"></div>
+        <form class="b-form-checkup ui-form-3" id="contactForm" action="#" method="post">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" id="user-name" type="text" name="user-name" placeholder="Your Name" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" id="user-phone" type="tel" name="user-phone" placeholder="Phone" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input class="form-control" id="user-email" type="email" name="user-email" placeholder="Email" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" type="text" id="datetimepicker" placeholder="Pick Date" required><!-- <i class="form-control-feedback icon fa fa-calendar"></i> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <textarea class="form-control" id="user-message" rows="5" placeholder="Message" required></textarea>
+                                            <button class="btn btn-primary mrgn">book auto checkup</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                                </div>
     </div>
 </div>
-<!-- /#wrapper -->
-<script src="js/jquery.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript">
-	$("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-</script>
-  <script src="js/jquery.dataTables.min.js"></script>
-<script>
-$(document).ready(function() {
-    $('#example').DataTable( );
-	
-	
-} );
-</script>
-<script>
-$(document).ready(function() {
-   function toggleIcon(e) {
-    $(e.target)
-        .prev('.panel-heading')
-        .find(".more-less")
-        .toggleClass('glyphicon-plus glyphicon-minus');
-}
-$('.panel-group').on('hidden.bs.collapse', toggleIcon);
-$('.panel-group').on('shown.bs.collapse', toggleIcon);
-} );
-</script>
-
-
-
+			<div class="row">
+				<!--Offer-->
+				<div class="col-sm-6 col-md-4 service-offer">
+					<div class="row inner"><a href="#">
+						<img src="images/1.jpg" alt="" class="img-responsive">
+						<div class="text-holder">
+							<div class="media this-heading">
+								<div class="media-body">
+									<h4 class="this-title">ONE WAY HIRE CAR</h4>
+									<h5 class="this-area">All USA</h5>
+								</div>
+								<div class="media-right media-middle">
+									<span class="normal"><img src="images/services-icon1.png" alt="" class="this-icon"></span>
+									<span class="hover"><img src="images/services-icon1-hover.png" alt="" class="this-icon"></span>
+								</div>
+							</div>
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</a></div>
+				</div>
+				<!--Offer-->
+				<div class="col-sm-6 col-md-4 service-offer">
+					<div class="row inner"><a href="#">
+						<img src="images/2.jpg" alt="" class="img-responsive">
+						<div class="text-holder">
+							<div class="media this-heading">
+								<div class="media-body">
+									<h4 class="this-title">Airport transfers</h4>
+									<h5 class="this-area">Euro &amp; East Asia</h5>
+								</div>
+								<div class="media-right media-middle">  									
+									<span class="normal"><img src="images/services-icon2.png" alt="" class="this-icon"></span>
+									<span class="hover"><img src="images/services-icon2-hover.png" alt="" class="this-icon"></span>
+								</div>
+							</div>
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</a></div>
+				</div>
+				<!--Offer-->
+				<div class="col-sm-6 col-md-4 service-offer">
+					<div class="row inner"><a href="#">
+						<img src="images/3.jpg" alt="" class="img-responsive">
+						<div class="text-holder">
+							<div class="media this-heading">
+								<div class="media-body">
+									<h4 class="this-title">Flex (long-term car hire)</h4>
+									<h5 class="this-area">Euro &amp; East Asia</h5>
+								</div>
+								<div class="media-right media-middle">
+									<span class="normal"><img src="images/services-icon3.png" alt="" class="this-icon"></span>
+									<span class="hover"><img src="images/services-icon3-hover.png" alt="" class="this-icon"></span>
+								</div>
+							</div>
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</a></div>
+				</div>
+				<!--Offer-->
+				<div class="col-sm-6 col-md-4 service-offer">
+					<div class="row inner"><a href="#">
+						<img src="images/4.jpg" alt="" class="img-responsive">
+						<div class="text-holder">
+							<div class="media this-heading">
+								<div class="media-body">
+									<h4 class="this-title">Breakdown assistance</h4>
+									<h5 class="this-area">All USA</h5>
+								</div>
+								<div class="media-right media-middle">
+									<span class="normal"><img src="images/services-icon4.png" alt="" class="this-icon"></span>
+									<span class="hover"><img src="images/services-icon4-hover.png" alt="" class="this-icon"></span>
+								</div>
+							</div>
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</a></div>
+				</div>
+				<!--Offer-->
+				<div class="col-sm-6 col-md-4 service-offer">
+					<div class="row inner"><a href="#">
+						<img src="images/5.jpg" alt="" class="img-responsive">
+						<div class="text-holder">
+							<div class="media this-heading">
+								<div class="media-body">
+									<h4 class="this-title">ADDITIONAL COVER</h4>
+									<h5 class="this-area">Euro &amp; East Asia</h5>
+								</div>
+								<div class="media-right media-middle">
+									<span class="normal"><img src="images/services-icon5.png" alt="" class="this-icon"></span>
+									<span class="hover"><img src="images/services-icon5-hover.png" alt="" class="this-icon"></span>
+								</div>
+							</div>
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</a></div>
+				</div>
+				<!--Offer-->
+				<div class="col-sm-6 col-md-4 service-offer">
+					<div class="row inner"><a href="#">
+						<img src="images/6.jpg" alt="" class="img-responsive">
+						<div class="text-holder">
+							<div class="media this-heading">
+								<div class="media-body">
+									<h4 class="this-title">Chauffeur Drive</h4>
+									<h5 class="this-area">Euro &amp; East Asia</h5>
+								</div>
+								<div class="media-right media-middle">
+									<span class="normal"><img src="images/services-icon6.png" alt="" class="this-icon"></span>
+									<span class="hover"><img src="images/services-icon6-hover.png" alt="" class="this-icon"></span>
+								</div>
+							</div>
+							<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.</p>
+						</div>
+					</a></div>
+				</div>  				
+			</div>   			
+		</div>
+	</section>
+ 
+ <footer class="footer">
+ 	<div class="container">
+    	<div class="row top">
+        	<div class="col-md-3">
+            	<h4>Get in Contact</h4>
+                <ul class="footer_contact">
+                	<li>
+                    	<i class="fa fa-map-marker"></i><span class="text">Rock St 12, Newyork City, USA</span>
+                    </li>
+                    <li>
+                    	<i class="fa fa-mobile"></i><span class="text">236-895-4732</span>
+                    </li>
+                    <li>
+                    	<i class="fa fa-envelope"></i><span class="text">carrental@gmail.com</span>
+                    </li>
+                    <li>
+                    	<a href="#" class="link_find_map">Find Us On Map</a>
+                    </li>
+               </ul>
+            </div>
+            
+            <div class="col-md-3">
+            	<h4>Latest Blog</h4>
+                <ul class="blog-list">
+                    <li><a href="#">Tout Terrain gold city</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                    <li><a href="#">Car driving a tunnel</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                    <li><a href="#">How to drive a car ?</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                </ul>
+            </div>
+            
+              <div class="col-md-3">
+              <h4>Usefull Links</h4>
+                <ul class="usefull-link">
+                  <li><a href="our_partners.html">Our Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Request a Quote</a></li>
+                </ul>
+               </div>
+               
+                <div class="col-md-3">
+            	<h4>Working Hours</h4>
+                
+                <div class="ovacrs_working_hour "><div class="title">Sales Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br>Saturday &amp; Sunday: <span>Closed</span></div></div>
+                
+                <div class="ovacrs_working_hour last"><div class="title">Service Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br>Saturday &amp; Sunday: <span>Closed</span></div></div>
+                
+                </div>
+        </div>
+    </div>
+    
+    <div class="container">
+    	<div class="row bottom">
+        	<div class="footer_social">
+            	<ul class="ireca_socials ">
+                    <li class="d-inline"><a href="#" class="facebook" target="_blank">Facebook</a></li>
+                    <li class="d-inline"><a href="#" class="twitter" target="_blank">Twitter</a></li>
+                    <li class="d-inline"><a href="#" class="youtube" target="_blank">Youtube</a></li>
+                    <li class="d-inline"><a href="#" class="google" target="_blank">Google+</a></li>
+                    <li class="d-inline"><a href="#" class="rss" target="_blank">Rss feed</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="footer_copyright">Copyright by Car Rental. All reserved</div>
+        </div>
+    </div>
+ </footer>  
 </body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({format: 'DD-MM-YYYY hh:mm'});
+				$('#datetimepicker2').datetimepicker({format: 'DD-MM-YYYY hh:mm'});
+            });
+        </script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript">
+        	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    autoplay:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+})
+        </script>
+         <script type="text/javascript">
+			$('[data-toggle="slide-collapse"]').on('click', function() {
+  $navMenuCont = $($(this).data('target'));
+  $navMenuCont.animate({
+    'width': 'toggle'
+  }, 350);
+  $(".menu-overlay").fadeIn(500);
+
+});
+$(".menu-overlay").click(function(event) {
+  $(".navbar-toggle").trigger("click");
+  $(".menu-overlay").fadeOut(500);
+});
+
+		</script>
 </html>

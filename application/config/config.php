@@ -15,7 +15,7 @@
 |
 */
 
-$config['base_url']	= 'http://localhost/suxxis/';
+$config['base_url']	= 'http://localhost/car-rental/';
 $config['site_name']	= '';
 
 /*
@@ -128,7 +128,7 @@ $config['subclass_prefix'] = 'MY_';
 | DO NOT CHANGE THIS UNLESS YOU FULLY UNDERSTAND THE REPERCUSSIONS!!
 |
 */
-$config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
+$config['permitted_uri_chars'] =  'a-z 0-9~%.:_\-@\='; //'a-z 0-9~%.:_\-';
 
 
 /*

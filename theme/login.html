@@ -1,115 +1,278 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title> Car Rental</title>
+    
+	<link rel="icon" href="../../favicon.ico">
+	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
 
-        <title>User Panel</title>
-
-         <!-- Bootstrap CSS CDN -->
-         <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Our Custom CSS -->
-        <link rel="stylesheet" href="css/style.css">
-        <style>
-		body{ background:url(images/login-bg.jpg); background-size:cover}
-		.overlay_panel{ background:rgba(2,36,71,0.9); position:absolute; width:100%; height:100%;}
-		.input-text-login {
-    width: 100%;
-    height: 40px;
-    padding: 10px 10px 10px 30px;border-radius: 3px;
-    border: 1px solid #eee;
-}
-.login_panel {
-    background: #fff;
-    padding: 20px;
-    width: 400px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: 0 auto;
-    top: 50%;
-    transform: translateY(-50%);
-    border-top: 5px solid #FBDB06;
-}
-.login_panel input[type=submit]{ width:100%; background:#FBDB06; color:#000; border:none; padding:10px; text-transform:uppercase; margin:0 0 15px;border-radius: 3px;}
-.login_panel a{ display:inline-block; margin:0 0 10px;}
-.form-group {
-    position: relative;
-}
-.form-group i {
-    position: absolute;
-    left: 10px;
-    top: 10px;
-}
-.logo-login img {
-
-    width: 160px;
-    display: block;
-
-}
-.social_icon_login a.facebook {
-    background: #3B5998;
-}
-.social_icon_login a {
-    background: #000;
-    color: #fff;
-    text-transform: capitalize;
-    font-size: 14px;
-    padding: 10px;
-    margin: 0 5px;
-    display: inline-block;
-    border-radius: 3px;
-}
-.social_icon_login a.twitter {
-    background: #1DA1F2;
-}
-.social_icon_login a.google {
-    background: #DD4B39;
-}
-.social_icon_login a i {
-    margin-right: 5px;
-}
-.login_panel h3 {
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    margin: 10px 0 15px;
-    float: left;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    border-top: 1px solid #eee;
-    padding-top: 20px;
-}
-.social_icon_login {
-    float: left;
-    width: 100%;
-    text-align: center;
-}
-
-		</style>
-    </head>
-    <body>
-    	
-        <div class="overlay_panel">
-        	<div class="login_panel">
-            		<div class="logo-login text-center"><a href="#"><img src="images/footer-logo.jpg"></a></div>
-            		<form>
-                    	<div class="form-group"><input type="text" placeholder="Username" class="input-text-login"> <i class="fa fa-user"></i></div>
-                        <div class="form-group"><input type="password" placeholder="Password" class="input-text-login"> <i class="fa fa-key"></i></div>
-                        <input type="submit" value="Login">
-                    </form>
-                    <div class="col-md-12 text-center"><a href="#" class="txt1">Forgot Username / Password?	</a> </div>
-                     <div class="col-md-12 text-center">
-                    <a class="txt1" href="#">Create new account<i class="fa fa-long-arrow-right"></i>		</a></div>
-                    
-                    <h3>or login with</h3>
-                    <div class="social_icon_login"><a href="#" class="facebook"><i class="fa fa-facebook"> </i> facebook</a>
-                        <a href="#" class="twitter"><i class="fa fa-twitter"> </i> twitter</a>
-                        <a href="#" class="google"><i class="fa fa-google-plus"> </i> google</a></div>
+<body>
+<section class="row info-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-xs-8 logo-box">
+                    <a href="index.html" class="logo"><h1>Rent car</h1></a>
+                </div>
+                <div class="col-sm-9 col-xs-4 info-box">
+                <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="slide-collapse" data-target="#main-nav-outer" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+           <div class="header-informations hidden-xs top-bar">
+              <ul class="social-lists-wSearch nav pull-right">
+                <li><a href="car.html">Find a Car</a></li>
+                  <li><a href="rent_car.html">Become a Partner</a></li>
+                  <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                  <li><a href="login.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+              </ul>
+              </div>
+                </div>
             </div>
         </div>
+    </section>
+    <div class="clearfix"></div>
+    <section class="tp_info">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="header-informations top-bar2">
+              <ul class="social-lists-wSearch nav pull-right">
+                <li><a href="car.html">Find a Car</a></li>
+                  <li><a href="rent_car.html">Become a Partner</a></li>
+                  <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                  <li><a href="login.html"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+              </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<nav class="navbar navbar-default main-navigation navbar-static-top" id="main-nav-outer">
+        <div class="container">
+            
+            <!-- Collect the nav links, forms, and other content for toggling -->
+             
+            <div class="navbar-collapse collapse" id="main-nav">                
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">home </a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li class="active"><a href="services.html">services</a></li>
+                    <li><a href="support.html">support</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    
+                </ul>           
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>       
+
+<section class="row page-cover">
+  		<div class="container">
+  			<h2 class="h1 page-title">Sign In / Sign Up</h2>
+  			<ol class="breadcrumb">
+  				<li><a href="index.html">home</a></li>
+  				<li class="active">Sign In / Sign Up</li>
+  			</ol>
+  		</div>
+  	</section>
     
-    </body>
+<section class="login">
+      <div class="container">
+        <div class="row">
+          <div class="login-wrapper">
+          <div class="col-md-5">
+            <div class="sign_in_frm">
+              <form>
+            <div class="Feat_head wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+              <h2><span>Login </span>Now</h2>
+              <h6>Login to our website</h6>
+            </div>
+            <div class="fb_login">
+              <div class="fb_icon"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></div>
+              <div class="fb_txt"><a href="#">Login with Facebook</a></div>
+            </div>
+            <div class="Sign_in text-center">
+              <span>or sign in</span>
+            </div>
+            <div class="frm_Fields">
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="email">
+              </div>
+              <button type="submit" class="btn btn-default">Login Now</button>
+              <div class="forgot text-right">
+              <a href="forgetpassword.html">Forgot Password?</a>
+            </div>
+            </div>
+          </form>
+          </div>
+          </div>
+          <div class="col-md-2 bdr-pos">
+            <div class="bdr">
+              <span>OR</span>
+            </div>
+          </div>
+          <div class="col-md-5">
+          <div class="sign_in_frm_rgt">
+              <form>
+            <div class="Feat_head wow fadeInDown" style="visibility: visible; animation-name: fadeInDown;">
+              <h2><span>Register </span>Now</h2>
+              <h6>Required information for account creation</h6>
+            </div>
+            <div class="frm_Fields">
+              <div class="form-group">
+                <input type="text" class="form-control" id="name" placeholder="User Name" name="email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Password" name="email">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="cnfrm_pass" placeholder="Confirm Password" name="email">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
+              </div>
+               <button type="submit" class="btn btn-default">Sign up Now</button>
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
+ <section class="add-banner">
+ 	<div class="container">
+    	<div class="col-md-6">
+        	<div class="r-sub-banner-in r-sub-dark">
+                <span>BLACK CARS DISCOUNT 50%</span>
+                <h4>Special Offers For <br><b>Black Friday.</b></h4>
+              </div>
+        </div>
+        <div class="col-md-6">
+        	<div class="r-sub-banner-in r-sub-accent">
+                <span>MONTHLY SPECIAL OFFER</span>
+                <h4>Rent 3 Days &amp; Get <br><b>Free Insurance.</b></h4>
+              </div>
+        </div>
+    </div>
+ </section>
+ <footer class="footer">
+ 	<div class="container">
+    	<div class="row top">
+        	<div class="col-md-3">
+            	<h4>Get in Contact</h4>
+                <ul class="footer_contact">
+                	<li>
+                    	<i class="fa fa-map-marker"></i><span class="text">Rock St 12, Newyork City, USA</span>
+                    </li>
+                    <li>
+                    	<i class="fa fa-mobile"></i><span class="text">236-895-4732</span>
+                    </li>
+                    <li>
+                    	<i class="fa fa-envelope"></i><span class="text">carrental@gmail.com</span>
+                    </li>
+                    <li>
+                    	<a href="#" class="link_find_map">Find Us On Map</a>
+                    </li>
+               </ul>
+            </div>
+            
+            <div class="col-md-3">
+            	<h4>Latest Blog</h4>
+                <ul class="blog-list">
+                    <li><a href="#">Tout Terrain gold city</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                    <li><a href="#">Car driving a tunnel</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                    <li><a href="#">How to drive a car ?</a>
+                        <span class="post-categories">In Motobike</span>
+                        <span class="post-date">August 15, 2018</span>
+                    </li>
+                </ul>
+            </div>
+            
+              <div class="col-md-3">
+                <h4>Usefull Links</h4>
+                <ul class="usefull-link">
+                    <li><a href="our_partners.html">Our Partners</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Request a Quote</a></li>
+                </ul>
+               </div>
+               
+                <div class="col-md-3">
+            	<h4>Working Hours</h4>
+                
+                <div class="ovacrs_working_hour "><div class="title">Sales Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br>Saturday &amp; Sunday: <span>Closed</span></div></div>
+                
+                <div class="ovacrs_working_hour last"><div class="title">Service Department:</div><div class="desc">Monday to Friday: 08.00 to 18.00 <br>Saturday &amp; Sunday: <span>Closed</span></div></div>
+                
+                </div>
+        </div>
+    </div>
+    
+    <div class="container">
+    	<div class="row bottom">
+        	<div class="footer_social">
+            	<ul class="ireca_socials ">
+                    <li class="d-inline"><a href="#" class="facebook" target="_blank">Facebook</a></li>
+                    <li class="d-inline"><a href="#" class="twitter" target="_blank">Twitter</a></li>
+                    <li class="d-inline"><a href="#" class="youtube" target="_blank">Youtube</a></li>
+                    <li class="d-inline"><a href="#" class="google" target="_blank">Google+</a></li>
+                    <li class="d-inline"><a href="#" class="rss" target="_blank">Rss feed</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="footer_copyright">Copyright by Car Rental. All reserved</div>
+        </div>
+    </div>
+ </footer>  
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/moment.js"></script>
+<script type="text/javascript" src="js/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({format: 'DD-MM-YYYY hh:mm'});
+				$('#datetimepicker2').datetimepicker({format: 'DD-MM-YYYY hh:mm'});
+            });
+        </script>
+         <script type="text/javascript">
+			$('[data-toggle="slide-collapse"]').on('click', function() {
+  $navMenuCont = $($(this).data('target'));
+  $navMenuCont.animate({
+    'width': 'toggle'
+  }, 350);
+  $(".menu-overlay").fadeIn(500);
+
+});
+$(".menu-overlay").click(function(event) {
+  $(".navbar-toggle").trigger("click");
+  $(".menu-overlay").fadeOut(500);
+});
+
+		</script>
 </html>

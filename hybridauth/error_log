@@ -1,0 +1,13 @@
+[12-Dec-2018 05:16:49 America/Chicago] PHP Fatal error:  Uncaught Hybrid_Exception: You cannot access this page directly. in /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php:211
+Stack trace:
+#0 /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php(157): Hybrid_Endpoint->authInit()
+#1 /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php(55): Hybrid_Endpoint->processAuthDone()
+#2 /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php(72): Hybrid_Endpoint->__construct(Array)
+#3 /home2/macto4j1/public_html/car-rental/hybridauth/index.php(15): Hybrid_Endpoint::process()
+#4 {main}
+
+Next Hybrid_Exception: Endpoint: Error while trying to init Hybrid_Auth: You cannot access this page directly. in /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php:217
+Stack trace:
+#0 /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php(157): Hybrid_Endpoint->authInit()
+#1 /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php(55): Hybrid_Endpoint->processAuthDone()
+#2 /home in /home2/macto4j1/public_html/car-rental/hybridauth/Hybrid/Endpoint.php on line 217

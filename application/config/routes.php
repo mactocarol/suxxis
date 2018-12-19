@@ -89,14 +89,23 @@ $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 
 $route['Home'] = "welcome/index/";
-$route['Risk-management'] = "welcome/risk_management/";
 $route['About-us'] = "welcome/about_us/";
 $route['Contact-us'] = "welcome/contact_us/";
-$route['Faq'] = "welcome/faq/";
-$route['Peer-to-peer'] = "welcome/peer_to_peer/";
-$route['How-it-works'] = "welcome/how_it_works/";
+$route['Services'] = "welcome/services/";
+$route['Support'] = "welcome/support/";
+$route['Find-car'] = "welcome/find_car/";
+$route['Become-partner'] = "welcome/partner/";
 
+$route['Login'] = "user/index/";
+$route['Logout'] = "user/logout/";
+$route['Signup'] = "user/user_register/";
+$route['Update-profile'] = "user/update_profile/";
 
+$route['My-cars'] = "partner";
+$route['Add-car'] = "partner/add";
+$route['Delete-car/(:any)'] = "partner/delete/$1";
+$route['Car-Detail/(:num)'] = "car/detail/$1";
+$route['Booking/(:num)'] = "car/booking/$1";
 /* End of file routes.php */
 
 /* Location: ./application/config/routes.php */

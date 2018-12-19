@@ -367,7 +367,7 @@ class Admin extends HT_Controller
                 redirect('admin');
             }
             if(!$this->session->userdata('logged_in')){
-                redirect('user');
+                redirect('admin');
             }
             
             $data=new stdClass();
@@ -383,7 +383,7 @@ class Admin extends HT_Controller
                     $data->message=$items->message;
                 }                
             }
-            $data->results = $this->admin_model->SelectRecord('users','*',array(),'id desc');
+            $data->results = $this->admin_model->SelectRecord('users','*',array("user_type"=>'2'),'id desc');
             $udata = array("id"=>$this->session->userdata('user_id'));                
             $data->result = $this->admin_model->SelectSingleRecord('admin','*',$udata,$orderby=array());
             $data->title = 'List Users';
@@ -440,7 +440,7 @@ class Admin extends HT_Controller
             $this->load->view('admin/includes/header',$data);		
             $this->load->view('edit_user_view',$data);
             $this->load->view('admin/includes/footer',$data);			
-		}
+	}
         
         public function status($id,$userid){
             if($this->session->userdata('user_group_id') != 1){
@@ -497,6 +497,216 @@ class Admin extends HT_Controller
             redirect('admin/lists');
         }
         
+	//**************** Partners **************
+	public function ListPartner(){
+            if($this->session->userdata('user_group_id') != 1){
+                redirect('admin');
+            }
+            if(!$this->session->userdata('logged_in')){
+                redirect('admin');
+            }
+            
+            $data=new stdClass();
+            if($this->session->flashdata('item')) {
+                $items = $this->session->flashdata('item');
+                if($items->success){
+                    $data->error=0;
+                    $data->success=1;
+                    $data->message=$items->message;
+                }else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->message=$items->message;
+                }                
+            }
+            $data->results = $this->admin_model->SelectRecord('users','*',array("user_type"=>'3'),'id desc');
+            $udata = array("id"=>$this->session->userdata('user_id'));                
+            $data->result = $this->admin_model->SelectSingleRecord('admin','*',$udata,$orderby=array());
+            $data->title = 'List Partners';
+            $data->field = 'Datatable';
+            $data->page = 'list_partner';
+            $this->load->view('admin/includes/header',$data);		
+            $this->load->view('list_partner_view',$data);
+            $this->load->view('admin/includes/footer',$data);		
+        }
+	
+	public function AddPartner(){
+            if($this->session->userdata('user_group_id') != 1){
+                redirect('admin');
+            }
+            
+            $data=new stdClass();
+            if($this->session->flashdata('item')) {
+                $items = $this->session->flashdata('item');
+                if($items->success){
+                    $data->error=0;
+                    $data->success=1;
+                    $data->message=$items->message;
+                }else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->message=$items->message;
+                }
+                
+            }
+            
+            ///print_r($data); die;
+            if(!empty($_POST)){
+               // print_r($_POST);die;
+                $udata=array(
+                        'f_name'=>$this->input->post('f_name'),
+                        'l_name'=>$this->input->post('l_name'),                        
+                        'email'=>$this->input->post('email'),
+                        'username'=>$this->input->post('username'),
+                        'password'=>($this->input->post('password') != '') ? $this->input->post('password') : 'e10adc3949ba59abbe56e057f20f883e',
+			'user_type' => '3'
+                    );
+               if($lastid = $this->admin_model->InsertRecord('users',$udata)){
+		
+			$cdata=array(
+				'company_name'=>$this->input->post('company_name'),
+				'vat_number'=>$this->input->post('vat_number'),                        
+				'phone_number'=>$this->input->post('phone_number'),
+				'street'=>$this->input->post('street'),
+				'address'=>$this->input->post('address'),
+				'country'=>$this->input->post('country'),                        
+				'state'=>$this->input->post('state'),
+				'city'=>$this->input->post('city'),
+				'zipcode'=>$this->input->post('zipcode'),
+				'user_id' => $lastid
+			    );
+			$this->admin_model->InsertRecord('partner',$cdata);
+                    $data->error=0;
+                    $data->success=1;
+                    $data->message="Partner Added Successfully";
+               }else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->message="Network Error";
+               }
+               $this->session->set_flashdata('item',$data);
+               redirect('admin/AddPartner');
+            }
+            $udata = array("id"=>$this->session->userdata('user_id'));                
+            $data->result = $this->admin_model->SelectSingleRecord('admin','*',$udata,$orderby=array());
+            $data->title = 'Add Partner';
+            $data->field = 'Add Partner';
+            $data->page = 'add_partner';
+            $this->load->view('admin/includes/header',$data);		
+            $this->load->view('add_partner_view',$data);
+            $this->load->view('admin/includes/footer',$data);                                        
+        }
+	
+	public function EditPartner($id){
+            if($this->session->userdata('user_group_id') != 1){
+                redirect('admin');
+            }
+            if(!$this->session->userdata('logged_in')){
+                redirect('admin');
+            }
+            $data=new stdClass();
+			
+            //print_r($result); die;
+		if($_POST){
+		$udata = array("id"=>$id);                
+		$reslt = $this->admin_model->SelectSingleRecord('users','*',$udata,$orderby=array());	
+		    $pass = ($this->input->post('password') != '') ? $this->input->post('password') : $reslt->password;
+                    $udata=array(
+                        'f_name'=>$this->input->post('f_name'),
+                        'l_name'=>$this->input->post('l_name'),                        
+                        'email'=>$this->input->post('email'),
+                        'username'=>$this->input->post('username'),
+                        'password'=>$pass,							
+                    );
+               
+		if ($this->admin_model->UpdateRecord('users',$udata,array("id"=>$id)))
+		{
+		    $cdata=array(
+			'user_id'=>$id,
+                        'company_name'=>$this->input->post('company_name'),
+			'vat_number'=>$this->input->post('vat_number'),                        
+			'phone_number'=>$this->input->post('phone_number'),
+			'street'=>$this->input->post('street'),
+			'address'=>$this->input->post('address'),
+			'country'=>$this->input->post('country'),                        
+			'state'=>$this->input->post('state'),
+			'city'=>$this->input->post('city'),
+			'zipcode'=>$this->input->post('zipcode'),							
+                    );
+		    $is_partner = $this->admin_model->SelectSingleRecord('partner','*',array("user_id"=>$id),$orderby=array());
+		    if(!empty($is_partner)){
+			$this->admin_model->UpdateRecord('partner',$cdata,array("user_id"=>$id));
+		    }else{
+			$this->admin_model->InsertRecord('partner',$cdata);
+		    }
+                    $data->error=0;
+                    $data->success=1;
+                    $data->message='Profile Update Sucessfully.';
+                     					
+		}else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->message='Network Error!';                    
+                }
+                //print_r($data); die;
+            $this->session->set_flashdata('item',$data);
+            redirect('admin/EditPartner/'.$id);
+			//print_r($this->session->flashdata('item')); die;	
+	    }
+            
+            $udata = array("id"=>$this->session->userdata('user_id'));                
+            $data->result = $this->admin_model->SelectSingleRecord('admin','*',$udata,$orderby=array());
+                        
+	    $joinreslt = $this->admin_model->joindataResult('u.id','p.user_id',array('u.id'=>$id),array('u.*','p.company_name','p.phone_number','p.vat_number','p.street','p.address as c_address','p.country as c_country','p.state as c_state','p.city as c_city','p.zipcode as c_zipcode'),'users as u','partner as p','u.id desc');
+	    if(!empty($joinreslt)){
+		$data->reslt = $joinreslt;
+	    }else{		
+		$userreslt = $this->admin_model->SelectRecord('users','*',array("id"=>$id),$orderby=array());
+		$data->reslt = $userreslt[0];
+	    }
+	    $data->id = $id;
+	    //echo "<pre>"; print_r($data->reslt); die;
+            $data->title = 'Edit Partner';
+            $data->field = 'Edit Partner';
+            $data->page = 'list_partner';
+            $this->load->view('admin/includes/header',$data);		
+            $this->load->view('edit_partner_view',$data);
+            $this->load->view('admin/includes/footer',$data);			
+	}
+	
+	
+	public function PartnerCars($id){
+            if($this->session->userdata('user_group_id') != 1){
+                redirect('admin');
+            }
+            if(!$this->session->userdata('logged_in')){
+                redirect('admin');
+            }
+            $data=new stdClass();
+			
+            //print_r($result); die;	
+            
+            $udata = array("id"=>$this->session->userdata('user_id'));
+	    $data->result = $this->admin_model->SelectSingleRecord('admin','*',$udata,$orderby=array());                        		    
+	    
+	    $data->user = $this->admin_model->SelectSingleRecord('users','*',array("id"=>$id),$orderby=array());                        		    
+	    $data->usercar = $this->admin_model->SelectRecord('usercars','*',array("user_id"=>$id),$orderby=array());	    
+	    //print_r($usercar); die;	    
+	    //print_r($cars); die;
+	    foreach($data->usercar as $key=>$row){
+		$info = $this->admin_model->SelectSingleRecord('cars','*',array("id"=>$row['title']),'id desc');		
+		$data->usercar[$key]['info'] = $info;
+	    }
+	    	    
+	    //echo "<pre>"; print_r($data->usercar); die;
+            $data->title = 'Partner Cars';
+            $data->field = 'Datatable';
+            $data->page = 'list_partner';
+            $this->load->view('admin/includes/header',$data);		
+            $this->load->view('partner_cars_view',$data);
+            $this->load->view('admin/includes/footer',$data);			
+	}
+	
         public function list_payment(){
             if($this->session->userdata('user_group_id') != 1){
                 redirect('admin');

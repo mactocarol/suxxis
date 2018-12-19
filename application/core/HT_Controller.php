@@ -151,5 +151,21 @@ public function custompagination1($Data)
 		$final_xml = simplexml_load_string($result);
 		return $final_xml;
 	}
+	
+	public function email($to,$subject,$msg)
+	{	
+		$config = array(     
+			'mailtype'  => 'html',
+			'charset'   => 'utf-8'
+		);	
+		//$body = $this->load->view('Common',$msg,TRUE);
+		$this->load->library('email',$config);
+		$this->email->set_newline("\r\n");
+		$this->email->from('info@mactosys.com','Car Rental');
+		$this->email->to($to); 
+		$this->email->subject($subject);
+		$this->email->message($msg);
+		$this->email->send(); 
+	}
 
 }

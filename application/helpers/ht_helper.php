@@ -90,11 +90,11 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
     }
     
     
-    function get_current_stage($userid){                   
+    function isPartner($userid){                   
             $CI =& get_instance();
             $CI->db->select('*');
             $CI->db->where(array('user_id'=>$userid));
-            $query = $CI->db->get('matrix');            
+            $query = $CI->db->get('partner');            
             $reslt = $query->row();
             
                                    

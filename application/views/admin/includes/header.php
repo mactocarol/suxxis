@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SUXXIS | <?=$title?></title>
+  <title>Car Rental | <?=$title?></title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -44,6 +44,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+	
+	<!-- jQuery 3 -->
+	<script src="<?php echo base_url();?>/assets/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- jQuery UI 1.11.4 -->
+	<script src="<?php echo base_url();?>/assets/bower_components/jquery-ui/jquery-ui.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script src="<?php echo base_url();?>/assets/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>/assets/js/bootstrapValidator.min.js"></script>
+	<style type="text/css">
+		input.num {
+			width: 40%;
+			background: #f2f2f2;
+			border: none;
+	}
+	.mytb td{text-align: center;}
+	.mytb .table-bordered>tbody>tr>td{background: #22243b;}
+	.mytb span {
+			background: #f77d0bb0;
+			width: 25px;
+			height: 25px;
+			line-height: 25px;
+			display: inline-block;
+			color: #fff;
+			margin-bottom: 5px;
+	}
+	.mytb th{text-align: center;background: #f77d0bb0;color: #fff;font-size: 24px;}
+	</style>
 </head>
 <body class="hold-transition skin-red sidebar-mini">
 <div class="wrapper">
@@ -54,7 +81,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>S</b></span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>SUXXIS</b></span>
+      <span class="logo-lg"><b>Car Rental</b></span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -122,13 +149,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="<?php echo base_url(); ?>upload/profile_image/thumb/<?=$result->image?>" class="user-image" alt="User Image">
+              <img src="<?php echo base_url(); ?>upload/profile_image/<?=$result->image?>" class="user-image" alt="User Image">
               <span class="hidden-xs"><?php print_r($this->session->userdata('email'));?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="<?php echo base_url(); ?>upload/profile_image/thumb/<?=$result->image?>" class="img-circle" alt="User Image">
+                <img src="<?php echo base_url(); ?>upload/profile_image/<?=$result->image?>" class="img-circle" alt="User Image">
 
                 <p>
                   <?php print_r($this->session->userdata('email'));?>                  

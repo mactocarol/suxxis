@@ -100,12 +100,21 @@ $route['Login'] = "user/index/";
 $route['Logout'] = "user/logout/";
 $route['Signup'] = "user/user_register/";
 $route['Update-profile'] = "user/update_profile/";
+$route['BookingMade'] = "user/BookingMade/";
+$route['BookingReceived'] = "user/BookingReceived/";
+$route['Transactions'] = "user/transactions/";
 
 $route['My-cars'] = "partner";
 $route['Add-car'] = "partner/add";
 $route['Delete-car/(:any)'] = "partner/delete/$1";
 $route['Car-Detail/(:num)'] = "car/detail/$1";
 $route['Booking/(:num)'] = "car/booking/$1";
+
+$route['Book'] = "car/buy";
+$route['Booking/success'] = "car/success";
+$route['Booking/cancel'] = "car/cancel";
+$route['Booking/ipn'] = "car/ipn";
+$route['Booking/thankyou'] = "car/thankyou";
 /* End of file routes.php */
 
 /* Location: ./application/config/routes.php */

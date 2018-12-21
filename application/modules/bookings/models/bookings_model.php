@@ -1,0 +1,8 @@
+<?php
+class Bookings_model extends HT_Model 
+{
+	function __construct() {
+		parent::__construct();		
+	}
+        
+}

@@ -56,7 +56,7 @@ class Partner extends HT_Controller
         
         public function add(){
 	if(!$this->session->userdata('logged_in')){
-                redirect('user');
+                //redirect('user');
             }
 	    
             $data=new stdClass();
@@ -74,8 +74,16 @@ class Partner extends HT_Controller
                 
             }                                    
             $data->cars = $this->partner_model->SelectRecord('cars',array(),array(),'id desc');
+	    
+	    if($this->session->userdata('partnerdata')){
+			$_POST = $this->session->userdata('partnerdata');
+			//print_r($_POST); die;
+			$this->session->unset_userdata('partnerdata');	
+		}
             //print_r($data->cars);die;							                            
-            if(!empty($_POST)){
+            if(!empty($_POST) && $this->session->userdata('user_id')){
+		
+		
 		$info = $this->partner_model->SelectRecord('partner',array(),array("user_id"=>$this->session->userdata('user_id')),array());
 		
 			    $udata = array(                                                    
@@ -97,6 +105,7 @@ class Partner extends HT_Controller
 				$this->partner_model->UpdateRecord('partner',$udata,array("user_id"=>$this->session->userdata('user_id')));
 			    }
 			    
+			    $this->partner_model->UpdateRecord('users',array('user_type'=>'3'),array("id"=>$this->session->userdata('user_id')));
 			    
 			    $price = [];
 				foreach($this->input->post('price') as $key=>$val){
@@ -121,7 +130,15 @@ class Partner extends HT_Controller
 			    $data->message='Car registered successfully';
 			    $this->session->set_flashdata('item',$data);
 			redirect('partner');
-                }
+                }else if(!empty($_POST) && !$this->session->userdata('user_id')){
+			$partnerdata = $_POST;
+			$this->session->set_userdata('partnerdata',$partnerdata);
+			$data->error=1;
+			$data->success=0;
+			$data->messages="You must signup first to become a partner.";	   
+			$this->session->set_flashdata('items',$data);
+			redirect('Signup');
+		}
 		
 		if($this->session->userdata('user_id')){			
 			$data->companyinfo = $this->partner_model->SelectSingleRecord('partner','*',array("user_id"=>$this->session->userdata('user_id')),$orderby=array());

@@ -49,7 +49,13 @@
 	   <div class="header-informations hidden-xs top-bar">
 	      <ul class="social-lists-wSearch nav pull-right">
 	        <li><a href="<?php echo site_url('Find-car');?>">Find a Car</a></li>
-	          <li><a href="<?php echo site_url('Become-partner');?>">Become a Partner</a></li>
+	          <?php if($this->session->userdata('user_id')){ ?>
+					<?php if(isset($result->user_type) && $result->user_type == 2){?>
+					<li><a href="<?php echo site_url('Become-partner');?>">Become a Partner</a></li>
+					<?php } ?>
+			  <?php }else { ?>
+					<li><a href="<?php echo site_url('Become-partner');?>">Become a Partner</a></li>
+			  <?php } ?>
 	          <?php if($this->session->userdata('user_id')) { ?>
 						<li><a href="<?php echo site_url('user');?>"><i class="fa fa-lock"></i> My Account</a></li>
 						<li><a href="<?php echo site_url('Logout');?>"><i class="fa fa-user-plus" aria-hidden="true"></i> Logout</a></li>
@@ -71,7 +77,13 @@
 	        <div class="header-informations top-bar2">
 	          <ul class="social-lists-wSearch nav pull-right">
 		<li><a href="<?php echo site_url('Find-car');?>">Find a Car</a></li>
-		  <li><a href="<?php echo site_url('Become-partner');?>">Become a Partner</a></li>
+		  <?php if($this->session->userdata('user_id')){ ?>
+				<?php if($result->user_type == 2){?>
+				<li><a href="<?php echo site_url('Become-partner');?>">Become a Partner</a></li>
+				<?php } ?>
+		  <?php }else { ?>
+				<li><a href="<?php echo site_url('Become-partner');?>">Become a Partner</a></li>
+		  <?php } ?>
 			<?php if($this->session->userdata('user_id')) { ?>
 			<li><a href="<?php echo site_url('user');?>"><i class="fa fa-lock"></i> My Account</a></li>
 		  <li><a href="<?php echo site_url('Logout');?>"><i class="fa fa-user-plus" aria-hidden="true"></i> Logout</a></li>

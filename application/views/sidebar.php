@@ -13,12 +13,15 @@
                                 <div class="dropdownlink"><a href="dashboard.html">Dashboard</a></div>
                               </li>
                               <li>
-                                <div class="dropdownlink"><a href="booking-detail.html">Bookings</a>
+                                <div class="dropdownlink"><a href="#">Bookings</a>
                                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                                 <ul class="submenuItems">
-                                  <li><a href="booking.html">Bookings Made</a></li>
-                                  <li><a href="booking.html">Bookings Received</a></li>
+                                <?php if(isset($result->user_type) && $result->user_type == 2){ ?>                                                                
+                                  <li><a href="<?php echo site_url('BookingMade');?>">Bookings Made</a></li>
+                                  <?php } else if(isset($result->user_type) && $result->user_type == 3) { ?>
+                                  <li><a href="<?php echo site_url('BookingReceived');?>">Bookings Received</a></li>
+                                  <?php } ?>
                                 </ul>
                               </li>
                               <!-- <li>
@@ -44,7 +47,7 @@
                                   <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                                 <ul class="submenuItems">
-                                  <li><a href="billing.html">Transactions</a></li>
+                                  <li><a href="<?php echo site_url('Transactions');?>">Transactions</a></li>
                                   <li><a href="paymentsource.html">Payment Sources</a></li>
                                 </ul>
                               </li>

@@ -55,6 +55,7 @@
               <div class="form-group">
                 <input type="password" class="form-control" id="password" placeholder="Password" name="password">
               </div>
+	      <input type="hidden" class="form-control" name="return_uri" value="<?php echo isset($return_uri) ? $return_uri : ''; ?>">	      
               <button type="submit" class="btn btn-default">Login-Now</button>
 			  </form>	
               <div class="forgot text-right">
@@ -77,6 +78,7 @@
               <h6>Required information for account creation</h6>
             </div>
 			<?php
+			//print_r($this->session->userdata('partnerdata'));
 			// display error & success messages
 			if(isset($messages)) {					
 				if($success){
@@ -110,6 +112,12 @@
               <div class="form-group">
                 <input type="email" class="form-control" id="email" placeholder="Email Address" name="email">
               </div>
+	      
+	      <div class="form-group">
+                Signup as User <input type="radio" class="" id="usertype" placeholder="" name="usertype" value="2" <?php if(!$this->session->userdata('partnerdata')){ echo 'checked'; } ?>>
+		Signup as Partner <input type="radio" class="" id="usertype" placeholder="" name="usertype" value="3" <?php if($this->session->userdata('partnerdata')){ echo 'checked'; } ?>>
+              </div>
+	      
                <button type="submit" class="btn btn-default">Sign up Now</button>
             </div>
           </form>

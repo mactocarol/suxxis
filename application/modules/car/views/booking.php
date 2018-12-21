@@ -51,10 +51,12 @@
                         	<h4>Vehicle</h4>
                         <div class="form-input-icon">
                         	
-                            <select name="booking_car" id="booking_car" class="myboxtext">
-                                <option value="<?=$car['title']?>" disabled selected="selected"><?=$car['title']?></option>                                
+                            <select name="car_id" id="booking_car" class="myboxtext">
+				<?php foreach($cars as $c){?>
+                                <option value="<?=$c['id']?>" <?php if($c['title'] == $car['title']){ echo "selected"; } ?>><?=$c['title']?></option>
+				<?php } ?>
                             </select>
-			    <input type="hidden" name="car_id" value="<?=$car['id']?>">
+			    <!--<input type="hidden" name="car_id" value="<?=$car['id']?>">-->
 			</div>
                         
                         </div>
@@ -66,18 +68,48 @@
                  
                  <div class="form-group">
                         <h4>Pick-up Date/Time</h4>
-                        <div class="form-input-icon form-date-box"><input type="text" class="form-control" name="frm_date" placeholder="Date" id="datetimepicker1"><i class="fa fa-calendar"></i></div>
+                        <div class="form-input-icon form-date-box"><input type="text" class="form-control" name="frm_date" placeholder="Date" id="datetimepicker1" value="<?php echo isset($bookingdata) ? $bookingdata['frm_date'] : ''; ?>"><i class="fa fa-calendar"></i></div>
                         <div class="select-box">
-                        	<select name="hour_from" id="cr_hour_from" class="crSelect crHourMin"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09" selected="selected">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+                        	<select name="hour_from" id="cr_hour_from" class="crSelect crHourMin">
+					<option value="00" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '00')){ echo "selected"; } ?>>00</option>
+					<option value="01" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '01')){ echo "selected"; } ?>>01</option>
+					<option value="02" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '02')){ echo "selected"; } ?>>02</option>
+					<option value="03" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '03')){ echo "selected"; } ?>>03</option>
+					<option value="04" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '04')){ echo "selected"; } ?>>04</option>
+					<option value="05" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '05')){ echo "selected"; } ?>>05</option>
+					<option value="06" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '06')){ echo "selected"; } ?>>06</option>
+					<option value="07" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '07')){ echo "selected"; } ?>>07</option>
+					<option value="08" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '08')){ echo "selected"; } ?>>08</option>
+					<option value="09" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '09')){ echo "selected"; } ?> selected="selected">09</option>
+					<option value="10" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '10')){ echo "selected"; } ?>>10</option>
+					<option value="11" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '11')){ echo "selected"; } ?>>11</option>
+					<option value="12" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '12')){ echo "selected"; } ?>>12</option>
+					<option value="13" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '13')){ echo "selected"; } ?>>13</option>
+					<option value="14" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '14')){ echo "selected"; } ?>>14</option>
+					<option value="15" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '15')){ echo "selected"; } ?>>15</option>
+					<option value="16" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '16')){ echo "selected"; } ?>>16</option>
+					<option value="17" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '17')){ echo "selected"; } ?>>17</option>
+					<option value="18" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '18')){ echo "selected"; } ?>>18</option>
+					<option value="19" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '19')){ echo "selected"; } ?>>19</option>
+					<option value="20" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '20')){ echo "selected"; } ?>>20</option>
+					<option value="21" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '21')){ echo "selected"; } ?>>21</option>
+					<option value="22" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '22')){ echo "selected"; } ?>>22</option>
+					<option value="23" <?php if(isset($bookingdata) && ($bookingdata['hour_from'] == '23')){ echo "selected"; } ?>>23</option>
+				</select>
                             
-                            <select name="minutes_from" id="cr_minutes_from" class="crSelect crHourMin"><option value="00" selected="selected">00</option><option value="15">15</option><option value="30">30</option><option value="45">45</option></select>
+                            <select name="minutes_from" id="cr_minutes_from" class="crSelect crHourMin">
+				<option value="00" selected="selected">00</option>
+				<option value="15" <?php if(isset($bookingdata) && ($bookingdata['minutes_from'] == '15')){ echo "selected"; } ?>>15</option>
+				<option value="30" <?php if(isset($bookingdata) && ($bookingdata['minutes_from'] == '30')){ echo "selected"; } ?>>30</option>
+				<option value="45" <?php if(isset($bookingdata) && ($bookingdata['minutes_from'] == '45')){ echo "selected"; } ?>>45</option>
+			    </select>
                         </div>
 			<span id="frm_date_error" style="color:red"></span>
                  </div>
                  
                   		<div class="form-group location-box">
                         <h4>picking up location</h4>
-                        <div class="form-input-icon"><input type="text" class="form-control" name="pickup" placeholder="Location"><i class="fa fa-globe"></i></div>
+                        <div class="form-input-icon"><input type="text" class="form-control" name="pickup" placeholder="Location" value="<?php echo isset($bookingdata) ? $bookingdata['pickup'] : ''; ?>"><i class="fa fa-globe"></i></div>
                  </div>
                  
                  </div>
@@ -85,18 +117,48 @@
                  
                  <div class="form-group">
                         <h4>Return Date/Time</h4>
-                        <div class="form-input-icon form-date-box"><input type="text" name="to_date" class="form-control" placeholder="Date" id="datetimepicker2"><i class="fa fa-calendar"></i></div>
+                        <div class="form-input-icon form-date-box"><input type="text" name="to_date" class="form-control" placeholder="Date" id="datetimepicker2" value="<?php echo isset($bookingdata) ? $bookingdata['to_date'] : ''; ?>"><i class="fa fa-calendar"></i></div>
                         <div class="select-box">
-                        	<select name="hour_from1" id="cr_hour_from1" class="crSelect crHourMin"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09" selected="selected">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+                        	<select name="hour_from1" id="cr_hour_from" class="crSelect crHourMin">
+					<option value="00" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '00')){ echo "selected"; } ?>>00</option>
+					<option value="01" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '01')){ echo "selected"; } ?>>01</option>
+					<option value="02" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '02')){ echo "selected"; } ?>>02</option>
+					<option value="03" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '03')){ echo "selected"; } ?>>03</option>
+					<option value="04" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '04')){ echo "selected"; } ?>>04</option>
+					<option value="05" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '05')){ echo "selected"; } ?>>05</option>
+					<option value="06" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '06')){ echo "selected"; } ?>>06</option>
+					<option value="07" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '07')){ echo "selected"; } ?>>07</option>
+					<option value="08" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '08')){ echo "selected"; } ?>>08</option>
+					<option value="09" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '09')){ echo "selected"; } ?> selected="selected">09</option>
+					<option value="10" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '10')){ echo "selected"; } ?>>10</option>
+					<option value="11" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '11')){ echo "selected"; } ?>>11</option>
+					<option value="12" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '12')){ echo "selected"; } ?>>12</option>
+					<option value="13" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '13')){ echo "selected"; } ?>>13</option>
+					<option value="14" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '14')){ echo "selected"; } ?>>14</option>
+					<option value="15" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '15')){ echo "selected"; } ?>>15</option>
+					<option value="16" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '16')){ echo "selected"; } ?>>16</option>
+					<option value="17" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '17')){ echo "selected"; } ?>>17</option>
+					<option value="18" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '18')){ echo "selected"; } ?>>18</option>
+					<option value="19" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '19')){ echo "selected"; } ?>>19</option>
+					<option value="20" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '20')){ echo "selected"; } ?>>20</option>
+					<option value="21" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '21')){ echo "selected"; } ?>>21</option>
+					<option value="22" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '22')){ echo "selected"; } ?>>22</option>
+					<option value="23" <?php if(isset($bookingdata) && ($bookingdata['hour_from1'] == '23')){ echo "selected"; } ?>>23</option>
+				</select>
                             
-                            <select name="minutes_from1" id="cr_minutes_from1" class="crSelect crHourMin"><option value="00" selected="selected">00</option><option value="15">15</option><option value="30">30</option><option value="45">45</option></select>
+                            <select name="minutes_from1" id="cr_minutes_from" class="crSelect crHourMin">
+				<option value="00" selected="selected">00</option>
+				<option value="15" <?php if(isset($bookingdata) && ($bookingdata['minutes_from1'] == '15')){ echo "selected"; } ?>>15</option>
+				<option value="30" <?php if(isset($bookingdata) && ($bookingdata['minutes_from1'] == '30')){ echo "selected"; } ?>>30</option>
+				<option value="45" <?php if(isset($bookingdata) && ($bookingdata['minutes_from1'] == '45')){ echo "selected"; } ?>>45</option>
+			    </select>
                         </div>
 			<span id="to_date_error" style="color:red"></span>
                  </div>
                  
                   		<div class="form-group location-box">
                         <h4> Return location</h4>
-                        <div class="form-input-icon"><input type="text" name="dropoff" class="form-control" placeholder="Location"><i class="fa fa-globe"></i></div>
+                        <div class="form-input-icon"><input type="text" name="dropoff" class="form-control" placeholder="Location" value="<?php echo isset($bookingdata) ? $bookingdata['dropoff'] : ''; ?>"><i class="fa fa-globe"></i></div>
                  </div>
                  
                  </div>
@@ -134,7 +196,7 @@
                  <div class="form-ser-btn">
             		<div class="form-group">
                         
-                        <button type="button" id="availability" class="btn btn-primary">Check Price & Availabillity</button>
+                        <button type="button" id="availability" class="btn btn-primary">Calculate Price</button>
 			<button type="submit" class="btn btn-primary">Book Now</button>
                     </div>
                     </div>

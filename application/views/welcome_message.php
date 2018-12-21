@@ -5,177 +5,107 @@
 
 <div class="this-texts container">
 <div class="col-md-6 text-left">
-<form>
- <div class="form-wrap">
-	
-<div class="col-md-12">
-	 <div class="form-group">
-	<h4>Vehicle</h4>
-<div class="form-input-icon">
-	
-    <select name="booking_car" id="booking_car" class="myboxtext">
-        <option value="0" disabled selected="selected">Choose your model</option>
-        <option value="0" disabled> ======= Economy ======= </option>					                                                          <option value="406">Fiat Panda 1.0 - Group 0</option>
-        <option value="416">Peugeot 107 1.0 - Group 0 SPECIAL OFFER</option>
-        <option value="409">SEAT Mii 5 DOORS 1.0 - Group A</option>
-        <option value="309">Toyota Aygo 1.0 - Group A</option>
-        <option value="389">Peugeot 108 1.0 - Group A</option>
-        <option value="329">Fiat Panda 1.2 - Group A</option>
-        <option value="412">Nissan Micra 1.2 5 doors - Group B</option>
-        <option value="334">Toyota Yaris 1.0 - Group B</option>
-        <option value="348">PEUGEOT 207 1.1 - Group B</option>
-        <option value="377">FIAT Punto 1.2 - Group B</option>
-        <option value="388">Mitsubishi space star 1.2 - Group B</option>
-        <option value="337">Fiat Panda 1.3 Diesel - Group B2</option>
-        <option value="398">FIAT 500 1.2 - Group C</option>
-        <option value="390">Peugeot 208 1.2 - Group C</option>
-        <option value="420">Citroen C3 1.2 - Group C</option>
-        <option value="0" disabled> ======= Small Family ======= </option>					                                                          <option value="239">Ford Fiesta 1.0 Turbo - Group C</option>
-        <option value="240">Renault Clio new model 900 Turbo - Group C</option>
-        <option value="347">NISSAN NOTE 1.2 - Group C</option>
-        <option value="340">Nissan Micra New Modell 900 Turbo - Group C</option>
-        <option value="332">Toyota Yaris 1.2 - Group C</option>
-        <option value="283">SEAT IBIZA 1.0 turbo - Group C</option>
-        <option value="253">Volkswagen Polo 1.0 - Group C</option>
-        <option value="255">Mitsubishi Colt - Group C</option>
-        <option value="311">Opel Corsa 1.0 turbo - Group C</option>
-        <option value="312">Renault Clio 1.5 Diesel - Group C1</option>
-        <option value="399">SEAT IBIZA 1.4 TDI - Group C1</option>
-        <option value="321">Peugeot 208 1.4 HDI diesel - Group C1</option>
-        <option value="403">Fiat 500 1.3 diesel - Group C1</option>
-        <option value="315">Fiat Grande Punto 1.3 Diesel - Group C1</option>
-        <option value="314">Toyota Yaris 1.4 Diesel - Group C1</option>
-        <option value="313">Opel Corsa 1.3 Diesel - Group C1</option>
-        <option value="242">Ford Focus 1.6 Diesel - Group D</option>
-        <option value="243">Renault Megane 1.5 dci - Group D</option>
-        <option value="392">Renault CAPTUR 1.5 DCI - Group D</option>
-        <option value="379">NISSAN PULSAR 1.5 DCI - Group D</option>
-        <option value="400">Seat Leon 1.6 TDI - Group D</option>
-        <option value="0" disabled> ======= Intermediate ======= </option>					                                                          <option value="410">Renault Captur TCE 900 Turbo - Group C2</option>
-        <option value="415">Renault Clio 900 Turbo Tourer TCE - Group C2</option>
-        <option value="422">VW Golf - Group C2</option>
-        <option value="385">FIAT 500 1.2 OPEN ROOF - Group C3</option>
-        <option value="246">VW Golf TDI - Group E</option>
-        <option value="319">CHEVROLET CRUZE 1.6 diesel - Group G</option>
-        <option value="383">FORD FOCUS WAGON 1.6 - Group G</option>
-        <option value="382">RENAULT MEGANE 1.5 WAGON - Group G</option>
-        <option value="0" disabled> ======= Automatic ======= </option>					                                                          <option value="236">Smart Pulse Automatic 1.0 - Group B1</option>
-        <option value="256">Smart Pulse 1.0 CABRIOLET - Group C3</option>
-        <option value="419">Fiat 500 1.2 automatic - Group D1</option>
-        <option value="411">Citroen C3 1.2 Automatic - Group D1</option>
-        <option value="407">Renault Clio 1.5 Diesel Automatic - Group D1</option>
-        <option value="393">Mitsubishi spacestar 1.2 Autom. - Group D1</option>
-        <option value="257">Toyota Yaris 1.4 Diesel Automatic - Group D1</option>
-        <option value="331">Opel Corsa automatic 900 Turbo - Group D1</option>
-        <option value="417">Toyota Aygo 1.0 automatic - Group D2</option>
-        <option value="397">Lancia Delta 1.5 Diesel Automatic - Group E1</option>
-        <option value="244">Toyota Auris 1.4 Automatic Diesel - Group E1</option>
-        <option value="284">Renault Megane 1.5 DCI Aut. - Group E1</option>
-        <option value="401">Citroen C4 Cactus 1.4 Diesel Aut. - Group E1</option>
-        <option value="402">Renault Captur 1.5 DCI Automatic - Group E1</option>
-        <option value="0" disabled> ======= Luxury ======= </option>					                                                          <option value="378">MERCEDES A CLASS 1.5 CDI - Group E</option>
-        <option value="421">Renault Talisman1.6 DCI Aut - Group E2</option>
-        <option value="245">Mercedes Class C - Group K</option>
-        <option value="339">BMW 318D DIESEL TOURING - Group K</option>
-        <option value="0" disabled> ======= Van 9 seats ======= </option>					                                                          <option value="248">TOYOTA PROACE 9 SEATS - Group H</option>
-        <option value="396">Renault Trafic  - 9 seats - Group H</option>
-        <option value="249">Volkswagen Transporter TDI - Group H</option>
-        <option value="384">FORD TRANSIT - 9 seats - Group H</option>
-        <option value="0" disabled> ======= Van 7 seats ======= </option>					                               <option value="375">Renault scenic Diesel 7 seats - Group I</option>
-        <option value="250">Opel Zafira DTI - Group I</option>
-        <option value="251">Volkswagen Touran TDI 7 seats - Group I</option>
-        <option value="405">Toyota Verso 7 seats Diesel - Group I</option>
-												    </select>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="col-md-6">
-
-<div class="form-group">
-<h4>Pick-up Date/Time</h4>
-<div class="form-input-icon form-date-box"><input type="text" class="form-control" placeholder="Date" id="datetimepicker1"><i class="fa fa-calendar"></i></div>
-<div class="select-box">
-	<select name="hour_from" id="cr_hour_from" class="crSelect crHourMin"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09" selected="selected">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
-    
-    <select name="minutes_from" id="cr_minutes_from" class="crSelect crHourMin"><option value="00" selected="selected">00</option><option value="15">15</option><option value="30">30</option><option value="45">45</option></select>
-</div>
-</div>
-
-	<div class="form-group location-box">
-<h4>picking up location</h4>
-<div class="form-input-icon"><input type="text" class="form-control" placeholder="Location"><i class="fa fa-globe"></i></div>
-</div>
-
-</div>
-<div class="col-md-6">
-
-<div class="form-group">
-<h4>Return Date/Time</h4>
-<div class="form-input-icon form-date-box"><input type="text" class="form-control" placeholder="Date" id="datetimepicker2"><i class="fa fa-calendar"></i></div>
-<div class="select-box">
-	<select name="hour_from" id="cr_hour_from" class="crSelect crHourMin"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09" selected="selected">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
-    
-    <select name="minutes_from" id="cr_minutes_from" class="crSelect crHourMin"><option value="00" selected="selected">00</option><option value="15">15</option><option value="30">30</option><option value="45">45</option></select>
-</div>
-</div>
-
-	<div class="form-group location-box">
-<h4> Return location</h4>
-<div class="form-input-icon"><input type="text" class="form-control" placeholder="Location"><i class="fa fa-globe"></i></div>
-</div>
-
-</div>
-
-<div class="col-md-12">
-<p>Funchal Car Hire provides quality rent-a-car services in all Madeira.</p>
-<p><i class="fa fa-check"></i> Full Insurance - ALL INCLUSIVE (included in price)</p>
-</div>
-
-<div class="col-md-12">
-<div class="row">
-<div class="total_price">
-<div class="col-md-12"><h4>Total Price</h4></div>
-<div class="col-md-4">
-<div class="form-group location-box">
-  
-    <div class="form-input-icon"><input type="text" class="form-control" placeholder="Total Price"></div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="form-group location-box">
-    <div class="form-input-icon"><input type="text" class="form-control" placeholder="Currency "><i class="fa fa-eur"></i></div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="form-cal-btn">
-
-<button class="btn btn-primary">Calculate</button>
-</div>
-</div>
-
-</div>
-</div>
-</div>
-
-<div class="col-md-12">
-<div class="form-ser-btn">
-	<div class="form-group">
-
-<button class="btn btn-primary">Search car</button>
-</div>
-</div>
-</div>
-</div>
-
-
-</form>
+<form id="booking_form" name="booking_form" method="POST" action="<?php echo site_url('car/booking');?>">
+        		 <div class="form-wrap">
+                 		
+                        <div class="col-md-12">
+                        	 <div class="form-group">
+                        	<h4>Vehicle</h4>
+                        <div class="form-input-icon">
+                        	
+                            <select name="car_id" id="booking_car" class="myboxtext">
+																											<?php foreach($cars as $c){?>
+																																																							<option value="<?=$c['id']?>"><?=$c['title']?></option>
+																											<?php } ?>
+																																																			</select>																														
+																										</div>
+                        
+                        </div>
+                        
+                        </div>
+                        
+                        
+               <div class="col-md-6">
+                 
+                 <div class="form-group">
+                        <h4>Pick-up Date/Time</h4>
+                        <div class="form-input-icon form-date-box"><input type="text" class="form-control" name="frm_date" placeholder="Date" id="datetimepicker1"><i class="fa fa-calendar"></i></div>
+                        <div class="select-box">
+                        	<select name="hour_from" id="cr_hour_from" class="crSelect crHourMin"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09" selected="selected">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+                            
+                            <select name="minutes_from" id="cr_minutes_from" class="crSelect crHourMin"><option value="00" selected="selected">00</option><option value="15">15</option><option value="30">30</option><option value="45">45</option></select>
+                        </div>
+			<span id="frm_date_error" style="color:red"></span>
+                 </div>
+                 
+                  		<div class="form-group location-box">
+                        <h4>picking up location</h4>
+                        <div class="form-input-icon"><input type="text" class="form-control" name="pickup" placeholder="Location"><i class="fa fa-globe"></i></div>
+                 </div>
+                 
+                 </div>
+                  <div class="col-md-6">
+                 
+                 <div class="form-group">
+                        <h4>Return Date/Time</h4>
+                        <div class="form-input-icon form-date-box"><input type="text" name="to_date" class="form-control" placeholder="Date" id="datetimepicker2"><i class="fa fa-calendar"></i></div>
+                        <div class="select-box">
+                        	<select name="hour_from1" id="cr_hour_from1" class="crSelect crHourMin"><option value="00">00</option><option value="01">01</option><option value="02">02</option><option value="03">03</option><option value="04">04</option><option value="05">05</option><option value="06">06</option><option value="07">07</option><option value="08">08</option><option value="09" selected="selected">09</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+                            
+                            <select name="minutes_from1" id="cr_minutes_from1" class="crSelect crHourMin"><option value="00" selected="selected">00</option><option value="15">15</option><option value="30">30</option><option value="45">45</option></select>
+                        </div>
+			<span id="to_date_error" style="color:red"></span>
+                 </div>
+                 
+                  		<div class="form-group location-box">
+                        <h4> Return location</h4>
+                        <div class="form-input-icon"><input type="text" name="dropoff" class="form-control" placeholder="Location"><i class="fa fa-globe"></i></div>
+                 </div>
+                 
+                 </div>
+                 
+                 <div class="col-md-12">
+                 	<p>Funchal Car Hire provides quality rent-a-car services in all Madeira.</p>
+                    <p><i class="fa fa-check"></i> Full Insurance - ALL INCLUSIVE (included in price)</p>
+                 </div>
+                 
+                <div class="col-md-12">
+                	<div class="row">
+                    <div class="total_price">
+                       <div class="col-md-12"><h4>Total Price</h4></div>
+                    <div class="col-md-4">
+                        <div class="form-group location-box">
+                          
+                            <div class="form-input-icon"><input type="text" class="form-control" id="total_price" placeholder="Total Price" value="" readonly></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="form-group location-box">
+                            <div class="form-input-icon"><input type="text" class="form-control" placeholder="Currency" readonly><i class="fa fa-eur"></i></div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">                    	
+                    </div>
+                   
+                    </div>
+                    </div>
+                </div>
+                 
+                 <div class="col-md-12">
+                 <div class="form-ser-btn">
+            		<div class="form-group">
+                        
+                        <button type="button" id="availability" class="btn btn-primary">Calculate Price</button>
+			<button type="submit" class="btn btn-primary">Book Now</button>
+                    </div>
+                    </div>
+             </div>
+                 </div>
+                 
+             
+        </form>
 </div>
 <div class="col-md-6">
 <h3 class="text-uppercase">All discounts just  for you</h3>
@@ -1530,5 +1460,82 @@
  </section>
  
  
+ <script>
+        $('#booking_form').bootstrapValidator({
+            //container: '#messages',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                pickup: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
+                    }
+                },
+                dropoff: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
+                    }
+                },
+                frm_date: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
+                    }
+                },
+		to_date: {
+                    validators: {
+                        notEmpty: {
+                            message: 'This field is required'
+                        },
+                    }
+                },           
+            }
+        });
+    </script>
  
+	<script>
+	$('#availability').on('click',function () {
+		//alert();
+		    var url = '<?php echo site_url('car/availability'); ?>'; // the script where you handle the form input.
+		    
+		    $.ajax({
+			   type: "POST",
+			   url: url,
+			   data: $("#booking_form").serialize(), // serializes the form's elements.
+			   beforeSend: function() {
+				$("#preloader").show();
+				$(".pace").show();
+			     },
+			   success: function(data)
+			   {
+			      console.log(data); // show response from the php script.
+			      var res = JSON.parse(data);
+			      
+			      if(res.error){
+				$('#frm_date_error').html(res.message);				
+			      }else if(res.error1){
+				console.log('khan '+res.error1);
+				$('#frm_date_error').html('');
+				$('#to_date_error').html(res.message1);				
+			      }else if(res.price){
+				$('#frm_date_error').html('');
+				$('#to_date_error').html('');
+				$('#total_price').val(res.price);
+			      }
+			      			
+			   }
+			 });
+		
+		    e.preventDefault(); // avoid to execute the actual submit of the form.
+	    
+	});
+	</script>
  

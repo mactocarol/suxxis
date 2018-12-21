@@ -99,29 +99,25 @@
                              </div>
                              <div class="form-group">
                                 <label>Country.</label>
-                                <select class="select2 form-control" id="country" data-max-options="3" data-live-search="true" name="country">
-                                  <optgroup label="Web">
+                                <select class="select2 form-control" id="country" data-max-options="3" data-live-search="true" name="country">                                  
                                       <option value="">Select Country</option>
                                       <option <?php echo (isset($reslt['c_country']) && $reslt['c_country'] == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
                                       <option <?php echo (isset($reslt['c_country']) && $reslt['c_country'] == 'India') ? 'selected' : ''; ?>>India</option>
                                       <option <?php echo (isset($reslt['c_country']) && $reslt['c_country'] == 'Australia') ? 'selected' : ''; ?>>Australia</option>
                                       <option <?php echo (isset($reslt['c_country']) && $reslt['c_country'] == 'Canada') ? 'selected' : ''; ?>>Canada</option>
-                                      <option <?php echo (isset($reslt['c_country']) && $reslt['c_country'] == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
-                                  </optgroup>
+                                      <option <?php echo (isset($reslt['c_country']) && $reslt['c_country'] == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>                                  
                                 </select>
                              </div>
                              
                              <div class="form-group">
                                 <label>State.</label>
-                                <select class="select2 form-control" id="state" data-max-options="3" data-live-search="true" name="state">
-                                  <optgroup label="Web">
+                                <select class="select2 form-control" id="state" data-max-options="3" data-live-search="true" name="state">                                  
                                       <option value="">Select State</option>
-                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
-                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'India') ? 'selected' : ''; ?>>India</option>
-                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Australia') ? 'selected' : ''; ?>>Australia</option>
-                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Canada') ? 'selected' : ''; ?>>Canada</option>
-                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
-                                  </optgroup>
+                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Aveiro') ? 'selected' : ''; ?>>Aveiro</option>
+                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Azores') ? 'selected' : ''; ?>>Azores</option>
+                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Beja') ? 'selected' : ''; ?>>Beja</option>
+                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Braga') ? 'selected' : ''; ?>>Braga</option>
+                                      <option <?php echo (isset($reslt['c_state']) && $reslt['c_state'] == 'Braganca') ? 'selected' : ''; ?>>Braganca</option>                                  
                                 </select>
                              </div>
                              

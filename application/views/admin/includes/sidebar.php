@@ -71,6 +71,18 @@
             <li <?php if($page == 'list_cars') { echo 'class="active"'; }?>><a href="<?php echo site_url('cars');?>"><i class="fa fa-circle-o"></i> List Cars</a></li>            
           </ul>
         </li>
+        
+        <li class="treeview <?php if($page == 'add_partner' || $page == 'list_bookings' ) { echo 'menu-open'; }?> ">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Bookings</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu" style="<?php if($page == 'add_partner' || $page == 'list_bookings' ) { echo 'display:block'; }?>">            
+            <li <?php if($page == 'list_partner') { echo 'class="active"'; }?>><a href="<?php echo site_url('bookings');?>"><i class="fa fa-circle-o"></i> Bookings</a></li>            
+          </ul>
+        </li>
         <!--<li class="treeview <?php if($page == 'add_news' || $page == 'list_news' ) { echo 'menu-open'; }?> ">
           <a href="#">
             <i class="fa fa-edit"></i> <span>News Panel</span>

@@ -34,6 +34,8 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
+		$this->load->model('welcome_model');	
+		$data->cars = $this->welcome_model->SelectRecord('cars','*',array("is_deleted"=>'1'),'id desc');		
 		$data->page_heading = "Home";
 		$data->page_link = "Home";	
         $this->load->view('header',$data);            
@@ -205,13 +207,13 @@ class Welcome extends CI_Controller {
 	public function partner()
 	{
 		$data=new stdClass();
-		if(!$this->session->userdata('user_id')){
-			$data->error=1;
-			$data->success=0;
-			$data->message="You must login first to become a partner.";	   
-			$this->session->set_flashdata('item',$data);
-			redirect('Login');
-		}
+		//if(!$this->session->userdata('user_id')){
+		//	$data->error=1;
+		//	$data->success=0;
+		//	$data->message="You must login first to become a partner.";	   
+		//	$this->session->set_flashdata('item',$data);
+		//	redirect('Login');
+		//}
 		
         
             if($this->session->flashdata('item')) {
@@ -228,10 +230,10 @@ class Welcome extends CI_Controller {
                 //print_r($data); die;
                 $data->msg = 1;
             }
-		
+		$this->load->model('welcome_model');
+		$data->cars = $this->welcome_model->SelectRecord('cars',array(),array(),'id desc');
 		if($this->session->userdata('user_id')){
-			$this->load->model('welcome_model');
-			$data->cars = $this->welcome_model->SelectRecord('cars',array(),array(),'id desc');
+			
 			$data->companyinfo = $this->welcome_model->SelectSingleRecord('partner','*',array("user_id"=>$this->session->userdata('user_id')),$orderby=array());
 		}
 		//print_r($data); die;

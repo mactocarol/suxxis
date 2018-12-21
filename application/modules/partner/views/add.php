@@ -49,15 +49,14 @@
                                  <label for="email">Country</label>
                                  <div class="form-group">
                                <div class="select">
-                                <select class="selectpicker" data-style="btn-info custom" id="country" data-max-options="3" data-live-search="true" name="country">
-                                  <optgroup label="Web">
+                                <select class="selectpicker" data-style="btn-info custom" id="country" data-max-options="3" data-live-search="true" name="country">                                  
                                       <option value="">Select Country</option>
+									  <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'Portugal') ? 'selected' : ''; ?>>Portugal</option>
                                       <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
                                       <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'India') ? 'selected' : ''; ?>>India</option>
                                       <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'Australia') ? 'selected' : ''; ?>>Australia</option>
                                       <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'Canada') ? 'selected' : ''; ?>>Canada</option>
-                                      <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
-                                  </optgroup>
+                                      <option <?php echo (isset($companyinfo->country) && $companyinfo->country == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>                                  
                                 </select>
                               </div>
                             </div>
@@ -66,15 +65,13 @@
                               <label for="email">State</label>
                               <div class="form-group">
                                  <div class="select">
-                                <select class="selectpicker" data-style="btn-info custom" id="state"  data-max-options="3" data-live-search="true" name="state">
-                                  <optgroup label="Web">
+                                <select class="selectpicker" data-style="btn-info custom" id="state"  data-max-options="3" data-live-search="true" name="state">                                  
                                       <option value="">Select State</option>
-                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
-                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'India') ? 'selected' : ''; ?>>India</option>
-                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Australia') ? 'selected' : ''; ?>>Australia</option>
-                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Canada') ? 'selected' : ''; ?>>Canada</option>
-                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'United Kingdom') ? 'selected' : ''; ?>>United Kingdom</option>
-                                  </optgroup>
+                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Aveiro') ? 'selected' : ''; ?>>Aveiro</option>
+                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Azores') ? 'selected' : ''; ?>>Azores</option>
+                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Beja') ? 'selected' : ''; ?>>Beja</option>
+                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Braga') ? 'selected' : ''; ?>>Braga</option>
+                                      <option <?php echo (isset($companyinfo->state) && $companyinfo->state == 'Braganca') ? 'selected' : ''; ?>>Braganca</option>                                  
                                 </select>
                               </div>
                               </div>
@@ -134,7 +131,7 @@
                     <div class="row">
                     <div class="col-md-12">
 						<div class="from-group">
-							<label>Price / Day</label>
+							<label>Price / Day in Euro(€)</label>
 								<div class="table-responsive mytb">
 									<table class="table table-bordered">
 										<thead>
@@ -143,106 +140,106 @@
 									<tbody>
 										<tr>
 											<td><span>1</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>2</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>3</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>4</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>5</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>6</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>7</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 							
 										</tr>
 										<tr>
 											<td><span>8</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>9</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>10</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>11</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>12</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td>13<div>
-												<input type="number" name="price[]" class="num" min="1">
+												<input type="number" name="price[]" class="num" min="1" placeholder="€">
 											</div></td>
 											<td><span>14</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 										</tr>
 										<tr>
 											<td><span>15</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>16</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>17</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>18</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>19</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>20</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>21</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 										</tr>
 										<tr>
 											<td><span>22</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>23</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>24</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>25</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>26</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>27</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>28</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 										</tr>
 										<tr>
 											<td><span>29</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>30</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td><span>31</span><div>
-												<input type="number" name="price[]" class="num"  min="1">
+												<input type="number" name="price[]" class="num"  min="1" placeholder="€">
 											</div></td>
 											<td></td>
 											<td></td>

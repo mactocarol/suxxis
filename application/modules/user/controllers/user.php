@@ -26,10 +26,28 @@ class User extends HT_Controller
                     $data->error=1;
                     $data->success=0;
                     $data->message=$items->message;
+                }				
+                //print_r($data); die;
+            }
+	    
+	    if($this->session->flashdata('items')) {
+                $items = $this->session->flashdata('items');
+                if($items->success){
+                    $data->error=0;
+                    $data->success=1;
+                    $data->messages=$items->messages;
+                }else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->messages=$items->messages;
                 }
                 
-            }
+            } 
             
+	    if($this->session->userdata('return_uri')){
+		$data->return_uri = $this->session->userdata('return_uri');
+	    }
+	    
 		$data->page_heading = "Login";
 		$data->page_link = "Login";		
 		$this->load->view('header',$data);            
@@ -51,7 +69,21 @@ class User extends HT_Controller
                     $data->message=$items->message;
                 }
                 
-            }                                    
+            }
+	    
+	    if($this->session->flashdata('items')) {
+                $items = $this->session->flashdata('items');
+                if($items->success){
+                    $data->error=0;
+                    $data->success=1;
+                    $data->messages=$items->messages;
+                }else{
+                    $data->error=1;
+                    $data->success=0;
+                    $data->messages=$items->messages;
+                }
+                
+            } 
                             
                 
             if(!empty($_POST['username'])){                
@@ -75,14 +107,16 @@ class User extends HT_Controller
                                                                                 
                                 $username= $this->input->post('username');                                
                                 $email= $this->input->post('email');                        
-                                $password=md5($this->input->post('password'));                                
+                                $password=md5($this->input->post('password'));
+				$usertype= $this->input->post('usertype'); 
                                  
                                 date_default_timezone_set('Asia/Kolkata');
                                 $created_dt=date('Y-m-d H:i:s'); 
                                     $udata = array(                                                    
                                                     'username'=>$username,
                                                     'email'=>$email,                                                   
-                                                    'password'=>$password,                                                    
+                                                    'password'=>$password,
+						    'user_type'=>$usertype,
                                                     'is_verified'=>'0',                                            
                                                     'created_at'=>$created_dt,
                                                     'key'=>$key
@@ -92,6 +126,19 @@ class User extends HT_Controller
                                     $data->success=1;
                                     $data->messages='You are registered successfully. Please verify your account by clicking on confirmation link that has been sent to your mail.';
                                     $this->session->set_flashdata('item',$data);
+				    
+				    if($this->session->userdata('partnerdata')){
+					$sess_array = array(
+						'user_id' => $new_id,
+						'email' => $username,
+						'image' => '',
+						'user_group_id' => 2,
+						'logged_in' => TRUE
+						);
+					$this->session->set_userdata($sess_array);
+					//print_r($sess_array); die;
+					redirect('partner/add');
+				    }
                         
                 }              
                //print_r($data->referal); die;
@@ -194,6 +241,7 @@ class User extends HT_Controller
             }
             else
             {
+		$return_uri = $this->input->post('return_uri');		
                 $email = $this->security->xss_clean($this->input->post('email'));
                 $password = $this->security->xss_clean($this->input->post('password'));
                 $Selectdata = array('id','email','username','image');
@@ -230,6 +278,10 @@ class User extends HT_Controller
                         $data->success=1;
                         $data->message='Login Successful';
                         //print_r($this->session->userdata('email')); die;
+			if($return_uri){
+				$this->session->unset_userdata('return_uri');
+				redirect($return_uri);
+			}
                         redirect('user/dashboard');	
                     
                 }
@@ -558,6 +610,78 @@ class User extends HT_Controller
             $this->session->set_flashdata('item',$data);            
             redirect('Login');
         }
+	
+	public function BookingMade()
+	{
+	    $data=new stdClass();
+	    $udata = array("id"=>$this->session->userdata('user_id'));                
+            $data->result = $this->user_model->SelectSingleRecord('users','*',$udata,$orderby=array());
+		//$data['booking']=$this->Common_Model->getdata("order",$where=array("user_id"=>$this->session->userdata('uid')),$sort='');
+		$order = $this->user_model->joindataResult('o.order_no','od.order_id',array('o.user_id'=>$this->session->userdata('user_id')),'o.*,od.product_id','order as o','order_detail as od','o.id desc');
+		//echo "<pre>"; print_r($order); die;
+		foreach($order as $key=>$row){			
+			$booking=$this->user_model->SelectSingleRecord("booking",'*',array("order_id"=>$row['order_no']),$orderby=array());			
+			$cars=$this->user_model->SelectSingleRecord('cars','*',array("id"=>$row['product_id']),$orderby=array());
+			
+			$order[$key]['booking'] = $booking;
+			$order[$key]['cars'] = $cars;						
+		}
+		
+		$data->booking = $order;
+		//echo "<pre>"; print_r($data->booking); die;
+		
+		
+		$data->page_heading = "My Bookings";
+		$data->page_link = "My_Bookings";
+		$this->load->view('header',$data);		
+		$this->load->view('BookingMade',$data);
+		$this->load->view('footer',$data);
+	}
+	
+	public function BookingReceived()
+	{
+	    $data=new stdClass();
+	    $udata = array("id"=>$this->session->userdata('user_id'));                
+            $data->result = $this->user_model->SelectSingleRecord('users','*',$udata,$orderby=array());
+		//$data['booking']=$this->Common_Model->getdata("order",$where=array("user_id"=>$this->session->userdata('uid')),$sort='');
+		$booking=$this->user_model->SelectRecord("booking",'*',array("seller_id"=>$this->session->userdata('user_id')),'id desc');
+		
+		
+		
+		foreach($booking as $key=>$row){
+			$order = $this->user_model->joindataResult('o.order_no','od.order_id',array('o.order_no'=>$row['order_id']),'o.*,od.product_id','order as o','order_detail as od','o.id desc');
+			$cars=$this->user_model->SelectSingleRecord('cars','*',array("id"=>$row['carid']),$orderby=array());
+			$users=$this->user_model->SelectSingleRecord('users','*',array("id"=>$row['user_id']),$orderby=array());
+			$booking[$key]['booking'] = $order;
+			$booking[$key]['cars'] = $cars;
+			$booking[$key]['users'] = $users;	
+		}				
+		
+		$data->booking = $booking;
+		//echo "<pre>"; print_r($data->booking); die;
+		
+		
+		$data->page_heading = "My Bookings";
+		$data->page_link = "My_Bookings";
+		$this->load->view('header',$data);		
+		$this->load->view('BookingReceived',$data);
+		$this->load->view('footer',$data);
+	}
+	
+	public function transactions()
+	{
+	    $data=new stdClass();
+	    $udata = array("id"=>$this->session->userdata('user_id'));                
+            $data->result = $this->user_model->SelectSingleRecord('users','*',$udata,$orderby=array());
+				
+		$data->transactions=$this->user_model->SelectRecord("transactions",'*',array("user_id"=>$this->session->userdata('user_id')),$orderby=array());					
+		
+		$data->page_heading = "My Bookings";
+		$data->page_link = "My_Bookings";
+		$this->load->view('header',$data);		
+		$this->load->view('transactions',$data);
+		$this->load->view('footer',$data);
+	}
 			
         public function update_notification($id){
             if($this->session->userdata('user_group_id') != 2){

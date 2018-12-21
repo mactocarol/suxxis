@@ -26,18 +26,18 @@ return
 				),
 				"Google" => array(
 					"enabled" => true,
-                    "keys"    => array ( "id" => "797353433483-g68hru756k4sngq5qmoujhp7qhor1tt8.apps.googleusercontent.com",
-				"secret" => "Y7tlZCahTd2iMju7_UAjfwbg" ), 				
+                    "keys"    => array ( "id" => "",
+				"secret" => "" ), 				
 				),
 				"Facebook" => array(
 					"enabled" => true,
-					"keys" => array("id" => "258947264768676", "secret" => "ed5e7f06f3a84b6a55a01982c8f41d4f"),
+					"keys" => array("id" => "", "secret" => ""),
 					"scope"   => ['email', 'user_about_me', 'user_birthday', 'user_hometown'], // optional
 					"trustForwarded" => false
 				),
 				"Twitter" => array(
 					"enabled" => true,
-					"keys" => array("key" => "uhRsWpVuv5cNDy4KMOZuu9ydF", "secret" => "DZGISBfczI1itjYzKI7ziU6cddxrcEUw0LtVdciZjKvkD4kSeH"),
+					"keys" => array("key" => "", "secret" => ""),
 					"includeEmail" => true
 				),
 				// windows live
